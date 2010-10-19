@@ -12,6 +12,7 @@ Partial Public Class TemplatePage
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         ' connection to DB
+        ' changed database string to templates_databse from Database_Templates - JF 10/15
         SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
                                   "database=templates_database;server=localhost;Connect Timeout=30"
 

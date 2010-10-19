@@ -9,6 +9,7 @@ Partial Public Class DatabaseTemplates
 
 
         ' connects to the templates database
+        ' changed database in string to templates_database from Database_Templates - JF 10/15
 
         SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
                                   "database=templates_database;server=localhost;Connect Timeout=30"
