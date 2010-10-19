@@ -1,0 +1,52 @@
+﻿<%@ Master Language="vb" AutoEventWireup="false" MasterPageFile="~/PageDesignFiles/InfoRanchGlobal.Master" CodeFile="MemberPage.master.vb" Inherits="MemberPage"  %>
+<asp:Content ID="Content1" ContentPlaceHolderID="InfoRanchGlobalContent" runat="server">
+
+<div id="mainContent">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+                
+                
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+<div id="links">
+<div id="LinkText">
+  
+    <asp:HyperLink ID="MemberHomePageHL" runat="server" 
+        NavigateUrl="~/MemberPages/MemberPageHome.aspx">Member Homepage</asp:HyperLink>
+    <br />
+    <asp:HyperLink ID="UpdateUserInfoHL" runat="server" 
+        NavigateUrl="~/FooterPages/RegisterPage.aspx">Update Your Info</asp:HyperLink>
+    <br />
+    <asp:HyperLink ID="UpgradeMembershipHL" runat="server" 
+    NavigateUrl="~/MemberPages/UpgradeMembershipPage.aspx">Upgrade Membership</asp:HyperLink>
+    
+    
+    <br />
+    <asp:HyperLink ID="TemplateDatabaseHL" runat="server"
+    NavigateUrl="~/MemberPages/DatabaseTemplates.aspx">Template Database</asp:HyperLink>
+    <br />
+    <asp:HyperLink ID="CustomDatabaseHL" runat="server"
+    NavigateUrl="~/MemberPages/CustomDataBase.aspx">Custom Database</asp:HyperLink>
+    <br />
+    <asp:HyperLink ID="PrintHL" runat="server">Print</asp:HyperLink>
+    <br />
+    <asp:HyperLink ID="LogOutHL" runat="server"
+    NavigateUrl="~/InfoRanch.aspx">Logout</asp:HyperLink>
+    
+    <br />
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+</asp:Content>
+
