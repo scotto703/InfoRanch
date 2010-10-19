@@ -13,7 +13,7 @@ Partial Public Class TemplatePage
 
         ' connection to DB
         SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
-                                  "database=Database_Templates;server=localhost;Connect Timeout=30"
+                                  "database=templates_database;server=localhost;Connect Timeout=30"
 
 
         ' selects the template names and loads the results to the checkbox list
