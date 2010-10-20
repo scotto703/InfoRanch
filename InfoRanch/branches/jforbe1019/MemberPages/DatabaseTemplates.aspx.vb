@@ -11,7 +11,7 @@ Partial Public Class DatabaseTemplates
         ' connects to the templates database
 
         SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
-                                  "database=templates_database;server=localhost;Connect Timeout=30"
+                                  "database=templates_databas;server=localhost;Connect Timeout=30"
 
 
         ' queries the database names and loads the results to the radio button list
