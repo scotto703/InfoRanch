@@ -10,6 +10,7 @@ Partial Public Class InfoRanch
     Dim DBCmd As New SqlCommand
     Dim DBAdap As New SqlDataAdapter
     Dim DS As New DataSet
+    Dim encrypted As New Encryption
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -26,7 +27,8 @@ Partial Public Class InfoRanch
 
         ' query the member authentication table
         Dim sql As SqlCommand = New SqlCommand("SELECT * FROM member_authentication WHERE user_name ='" _
-        & user_nameTB.Text & "' and user_password ='" & user_passwordTB.Text & "'", DBConn)
+        & user_nameTB.Text & "' and user_password = @password", DBConn)
+        sql.Parameters.Add("@password", SqlDbType.VarBinary).Value = encrypted.Encrypt(user_passwordTB.Text)
 
         dr = sql.ExecuteReader
 
