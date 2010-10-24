@@ -12,6 +12,8 @@ Partial Public Class RegisterPage
     Dim DBCmd As New SqlCommand
     Dim DBAdap As New SqlDataAdapter
     Dim DS As New DataSet
+    Dim encrypted As New Encryption
+
 
 
 
@@ -51,7 +53,7 @@ Partial Public Class RegisterPage
         DBCmd = New SqlCommand("INSERT INTO member_authentication(user_name, user_password)VALUES (@user_name, @user_password)", DBConn)
 
         DBCmd.Parameters.Add("@user_name", SqlDbType.NVarChar).Value = user_nameTB.Text
-        DBCmd.Parameters.Add("@user_password", SqlDbType.NVarChar).Value = user_passwordTB.Text
+        DBCmd.Parameters.Add("@user_password", SqlDbType.VarBinary).Value = encrypted.Encrypt(user_passwordTB.Text) 'Runs encryption method to encrypt database password
 
         DBCmd.ExecuteNonQuery()
 
