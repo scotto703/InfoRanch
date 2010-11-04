@@ -1,14 +1,23 @@
-﻿Imports System
+﻿'Encryption Class
+'key() a private variable to hold a 24 bit byte array for encryption/decription
+'iv() a private variable to hold an 8 bit byte array initialization variable
+'Encrypt(string) - Function to encrypt a string, returns a byte array
+'Decrypt(byte()) - Function to decrypt a byte array, returns a string
+
+Imports System
 Imports System.IO
 Imports System.Text
 Imports System.Security.Cryptography
 
 Namespace Util
+
     Public Class Encryption
+
         Private key() As Byte = {3, 4, 7, 13, 19, 21, 37, 55, 123, 230, 12, 8, 69, 23, 76, 77, 1, 5, 254, 44, 51, 99, 100, 113}
         Private iv() As Byte = {89, 13, 3, 6, 4, 101, 21, 99}
 
         Public Function Encrypt(ByVal inputText As String) As Byte()
+
             'Encode in UTF8 so GetByte can be used
             Dim utf8encoder As UTF8Encoding = New UTF8Encoding()
             Dim inputInBytes() As Byte = utf8encoder.GetBytes(inputText)
@@ -33,9 +42,11 @@ Namespace Util
             encryptedStream.Read(result, 0, encryptedStream.Length)
             cryptStream.Close()
             Return result
+
         End Function
 
         Public Function Decrypt(ByVal inputInBytes() As Byte) As String
+
             'UTFEncoding to turn Byte array into a string
             Dim utf8encoder As UTF8Encoding = New UTF8Encoding()
             Dim tdesProvider As TripleDESCryptoServiceProvider = New TripleDESCryptoServiceProvider()
@@ -54,9 +65,13 @@ Namespace Util
             Dim result(decryptedStream.Length - 1) As Byte
             decryptedStream.Read(result, 0, decryptedStream.Length)
             cryptStream.Close()
+
             Dim myutf As UTF8Encoding = New UTF8Encoding()
             Return myutf.GetString(result)
+
         End Function
+
     End Class
+
 End Namespace
 
