@@ -29,7 +29,7 @@ Partial Public Class DatabaseTemplates
 
         ' assigns the value to the session variable
 
-        Session("template_selection") = RadioButtonList1.SelectedValue
+        Session("template_selection") = templateList.SelectedValue
 
         Server.Transfer("~/MemberPages/TemplatePage.aspx", True)
 

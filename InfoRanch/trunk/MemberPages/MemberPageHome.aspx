@@ -4,7 +4,7 @@
     <table style="width: 100%">
         <tr>
             <td colspan="2" rowspan="2">
-                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Arial" 
+                <asp:Label ID="welcomeMsg" runat="server" Font-Bold="True" Font-Names="Arial" 
                     Font-Size="15pt" ForeColor="Maroon"></asp:Label>
                 <br />
             </td>
@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label4" runat="server" ForeColor="Maroon" Text="Label"></asp:Label>
+                <asp:Label ID="selectDBHead" runat="server" ForeColor="Maroon" Text="Label"></asp:Label>
             </td>
             <td>
                 &nbsp;</td>
@@ -51,10 +51,10 @@
         <tr>
             <td>
                 <asp:DropDownList ID="UserDatabasesDD" runat="server" AutoPostBack="True" 
-                    Font-Bold="True" Font-Names="Arial" Font-Size="Large" Height="75px" 
+                    Font-Bold="True" Font-Names="Arial" Font-Size="Medium" 
                     Width="151px">
                 </asp:DropDownList>
-                <asp:Label ID="Label3" runat="server" ForeColor="Maroon" Text="Label"></asp:Label>
+                <asp:Label ID="noDBMsg" runat="server" ForeColor="Maroon" Text="Label"></asp:Label>
             </td>
             <td>
                 &nbsp;</td>

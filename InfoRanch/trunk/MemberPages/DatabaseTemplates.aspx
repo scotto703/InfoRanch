@@ -6,7 +6,7 @@
         <td style="width: 35px">
             &nbsp;</td>
         <td style="width: 703px">
-            <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Arial" 
+            <asp:Label ID="selectDBHeader" runat="server" Font-Bold="True" Font-Names="Arial" 
                 Font-Size="Large" ForeColor="Maroon" Text="Please select your database:"></asp:Label>
         </td>
         <td style="width: 194px">
@@ -39,8 +39,9 @@
             
                
    
-  <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
-                DataSourceID="SqlDataSource1" DataTextField="fields" DataValueField="fields">
+  <asp:RadioButtonList ID="templateList" runat="server" 
+                DataSourceID="SqlDataSource1" DataTextField="fields" 
+                DataValueField="fields">
             </asp:RadioButtonList>
                         
    

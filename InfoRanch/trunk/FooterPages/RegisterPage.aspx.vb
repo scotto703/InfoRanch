@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-
+Imports InfoRanch.Util
 
 Partial Public Class RegisterPage
     Inherits System.Web.UI.Page

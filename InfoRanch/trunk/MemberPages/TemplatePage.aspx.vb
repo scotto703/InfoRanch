@@ -1,26 +1,53 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports InfoRanch.DB
 
 
 
 Partial Public Class TemplatePage
     Inherits System.Web.UI.Page
 
-    Dim FieldArray As New ArrayList
+    Dim newDB As New DBTemplate
+    Dim dataTypeList As New ArrayList
+    Dim sortOrderList As New List(Of Integer)
     Dim DBCmd As New SqlCommand
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'set newDB name field to session variable "template_selection"
+        newDB.setName(Session("template_selection"))
 
-        ' connection to DB
+        ' connection to DB to list fields in fieldList checkboxes
         SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
                                   "database=templates_database;server=localhost;Connect Timeout=30"
 
 
-        ' selects the template names and loads the results to the checkbox list
-        SqlDataSource1.SelectCommand = "SELECT fields FROM " & Session("template_selection") & ""
+        ' selects the template field names and loads the results to the checkbox list
+        SqlDataSource1.SelectCommand = "SELECT fields FROM " & newDB.getName() & " ORDER BY sortorder"
 
-        Label2.Text = "Please check the items below that you"
-        Label3.Text = "want to include with your " & Session("template_selection") & " information."
+        fieldSelectHeader1.Text = "Please check the items below that you"
+        fieldSelectHeader2.Text = "want to include with your " & newDB.getName() & " information."
+
+        'Connect to templates_database to get the list of datatypes for the fields
+        Dim DBConn As New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;" & _
+                                        "database=templates_database;server=localhost;Connect Timeout=30")
+
+        DBConn.Open()
+
+        'Select the datatypes from the database
+        DBCmd = New SqlCommand("SELECT datatypes,sortorder FROM " & newDB.getName() & " ORDER BY sortorder", DBConn)
+
+        'Read data from database
+        Dim dataTypesReader As SqlDataReader = DBCmd.ExecuteReader()
+
+        'Populate dataTypeList
+        While dataTypesReader.Read()
+            dataTypeList.Add(dataTypesReader(0))
+            sortOrderList.Add(dataTypesReader(1))
+        End While
+
+        'Close reader and connection
+        dataTypesReader.Close()
+        DBConn.Close()
     End Sub
 
     Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
@@ -36,51 +63,48 @@ Partial Public Class TemplatePage
         Dim itemCount As Integer
 
         'counts the number of checked items
-        itemCount = CheckBoxList1.Items.Count
+        itemCount = fieldList.Items.Count
 
-        ' adds item values to the array
+        ' Populates the member varialbes of newDB
         Dim i As Integer
         For i = 0 To (itemCount - 1)
-            If CheckBoxList1.Items(i).Selected = True Then
-                Dim newString = Replace(CheckBoxList1.Items(i).Value, " ", "")
-                FieldArray.Add(newString)
+            If fieldList.Items(i).Selected = True Then
+                Dim newString = Replace(fieldList.Items(i).Value, " ", "")
+                newDB.addItem(newString, dataTypeList(i), sortOrderList(i))
             End If
         Next i
 
-        Dim count = FieldArray.Count
+        Dim count = newDB.length
 
+        'Open Connection set up new user database from template
         DBConn.Open()
 
-        ' creates table
-        DBCmd = New SqlCommand("CREATE TABLE " & Session("template_selection") & "(" & FieldArray(0) & " nvarchar(50))", DBConn)
+        'Add new DB into TableList
+        DBCmd = New SqlCommand("INSERT INTO TableList VALUES('" & newDB.getName() & "')", DBConn)
         DBCmd.ExecuteNonQuery()
 
-        ' creates table fieldlist
-        DBCmd = New SqlCommand("CREATE TABLE FieldList" & Session("template_selection") & "(" & Session("template_selection") & " nvarchar(50))", DBConn)
-        DBCmd.ExecuteNonQuery()
-
-        ' interts the check box values to table
+        'Generate string for user database table creation
+        Dim createDB As String = "CREATE TABLE " & newDB.getName() & "("
         For i = 0 To count - 1
+            createDB &= newDB.getField(i) & " " & newDB.getDataType(i) & ","
+        Next
+        createDB &= "ID int)"
 
-            DBCmd = New SqlCommand("INSERT INTO FieldList" & Session("template_selection") & " VALUES ('" & FieldArray(i) & "')", DBConn)
+        'Create new table for user DB
+        DBCmd = New SqlCommand(createDB, DBConn)
+        DBCmd.ExecuteNonQuery()
+
+        'Create FieldList table for new user db
+        DBCmd = New SqlCommand("CREATE TABLE FieldList" & newDB.getName() & "(" & newDB.getName() & " nvarchar(50), sortorder int)", DBConn)
+        DBCmd.ExecuteNonQuery()
+
+        'Populate FieldList
+        For i = 0 To count - 1
+            DBCmd = New SqlCommand("INSERT INTO FieldList" & newDB.getName() & " VALUES('" & newDB.getField(i) & "'," & newDB.getSortOrder(i) & ")", DBConn)
             DBCmd.ExecuteNonQuery()
         Next
 
-        ' inserts check box values to table
-        For i = 1 To count - 1
-
-            DBCmd = New SqlCommand("ALTER TABLE " & Session("template_selection") & " ADD " & FieldArray(i) & " nvarchar(50)", DBConn)
-            DBCmd.ExecuteNonQuery()
-        Next
-
-
-        DBCmd = New SqlCommand("INSERT INTO FieldList" & Session("template_selection") & " VALUES ('ID')", DBConn)
-        DBCmd.ExecuteNonQuery()
-
-        DBCmd = New SqlCommand("INSERT INTO TableList VALUES ('" & Session("template_selection") & "')", DBConn)
-        DBCmd.ExecuteNonQuery()
-
-        DBCmd = New SqlCommand("ALTER TABLE " & Session("template_selection") & " ADD ID int", DBConn)
+        DBCmd = New SqlCommand("INSERT INTO FieldList" & newDB.getName() & " Values('ID', 200)", DBConn)
         DBCmd.ExecuteNonQuery()
 
         DBConn.Close()
