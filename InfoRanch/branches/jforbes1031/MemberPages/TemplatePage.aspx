@@ -3,7 +3,7 @@
     <table style="width: 100%">
         <tr>
             <td>
-                <asp:Label ID="Label2" runat="server" Text="Label" Font-Bold="True" 
+                <asp:Label ID="fieldSelectHeader1" runat="server" Text="Label" Font-Bold="True" 
                     Font-Names="Arial" ForeColor="Maroon"></asp:Label>
             </td>
             <td>
@@ -17,7 +17,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label3" runat="server" Text="Label" Font-Bold="True" 
+                <asp:Label ID="fieldSelectHeader2" runat="server" Text="Label" Font-Bold="True" 
                     Font-Names="Arial" ForeColor="Maroon"></asp:Label>
             </td>
             <td>
@@ -43,8 +43,9 @@
         </tr>
         <tr>
             <td>                
-                <asp:CheckBoxList ID="CheckBoxList1" runat="server" 
-                    DataSourceID="SqlDataSource1" DataTextField="fields" DataValueField="fields">
+                <asp:CheckBoxList ID="fieldList" runat="server" 
+                    DataSourceID="SqlDataSource1" DataTextField="fields" 
+                    DataValueField="fields">
                 </asp:CheckBoxList>                 
          </td>
             <td>
