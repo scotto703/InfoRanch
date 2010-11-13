@@ -1,5 +1,5 @@
 ﻿Imports System.Data
-Imports System.Data.SqlClient
+Imports Npgsql
 Imports InfoRanch.Util
 
 Partial Public Class InfoRanch
@@ -7,9 +7,9 @@ Partial Public Class InfoRanch
 
     ' Connection string to the administration DB
 
-    Dim DBConn As New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;database=administration;server=localhost;Connect Timeout=30")
-    Dim DBCmd As New SqlCommand
-    Dim DBAdap As New SqlDataAdapter
+    Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=administration;Timeout=30")
+    Dim DBCmd As New NpgsqlCommand
+    Dim DBAdap As New NpgsqlDataAdapter
     Dim DS As New DataSet
     Dim encrypted As New Encryption
 
@@ -20,13 +20,13 @@ Partial Public Class InfoRanch
 
     Protected Sub Submit_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
 
-        Dim dr As SqlDataReader
+        Dim dr As NpgsqlDataReader
         DBConn.Open()
 
         ' query the member authentication table
-        Dim sql As SqlCommand = New SqlCommand("SELECT * FROM member_authentication WHERE user_name ='" _
-            & user_nameTB.Text & "' and user_password = @password", DBConn)
-        sql.Parameters.Add("@password", SqlDbType.VarBinary).Value = encrypted.Encrypt(user_passwordTB.Text)
+        Dim sql As NpgsqlCommand = New NpgsqlCommand("SELECT * FROM member_authentication WHERE user_name ='" _
+            & userNameTB.Text & "' and user_password = @password", DBConn)
+        sql.Parameters.AddWithValue("@password", encrypted.encrypt(userPasswordTB.Text))
 
         dr = sql.ExecuteReader
 
@@ -34,13 +34,13 @@ Partial Public Class InfoRanch
         ' the user id value and re-directs to MemberPageHome.aspx
 
         If dr.HasRows Then
-            Session("user_id") = user_nameTB.Text
+            Session("user_id") = userNameTB.Text
             Server.Transfer("~/MemberPages/MemberPageHome.aspx", True)
         Else
             LoginError.Visible = True
-            user_nameTB.Text = String.Empty
-            user_passwordTB.Text = String.Empty
-            user_nameTB.Focus()
+            userNameTB.Text = String.Empty
+            userPasswordTB.Text = String.Empty
+            userNameTB.Focus()
         End If
 
         dr.Close()

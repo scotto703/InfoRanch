@@ -1,7 +1,4 @@
-﻿
-
-
-Imports System.Data
+﻿Imports System.Data
 Imports System.Data.SqlClient
 
 
@@ -62,17 +59,7 @@ Partial Public Class UserDataBasePage
 
     End Sub
 
-
-
-
-
-
-
     Protected Sub AddBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AddBTN.Click
-
-
-
-
 
         Dim allTextBoxValues As String = ""
         Dim c As Control
@@ -107,10 +94,13 @@ Partial Public Class UserDataBasePage
         For Each c In DataList1.Controls
 
             For Each childc In c.Controls
+
                 If TypeOf childc Is TextBox Then
                     CType(childc, TextBox).Text = ""
                 End If
+
             Next
+
         Next
 
         DataList1.Visible = False
