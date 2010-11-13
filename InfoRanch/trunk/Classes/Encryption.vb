@@ -16,7 +16,10 @@ Namespace Util
         Private key() As Byte = {3, 4, 7, 13, 19, 21, 37, 55, 123, 230, 12, 8, 69, 23, 76, 77, 1, 5, 254, 44, 51, 99, 100, 113}
         Private iv() As Byte = {89, 13, 3, 6, 4, 101, 21, 99}
 
-        Public Function Encrypt(ByVal inputText As String) As Byte()
+        'Uses a memory stream and a Triple DES provider to encrypt a string as a byte array
+        'Parameters:
+        ' inputText (String) - The string to be encrypted.
+        Public Function encrypt(ByVal inputText As String) As Byte()
 
             'Encode in UTF8 so GetByte can be used
             Dim utf8encoder As UTF8Encoding = New UTF8Encoding()
@@ -45,7 +48,10 @@ Namespace Util
 
         End Function
 
-        Public Function Decrypt(ByVal inputInBytes() As Byte) As String
+        'Uses a memory stream and a Triple DES provider to decrypte a byte array into a string
+        'Parameters:
+        ' inputInBytes() (Byte) - The byte array to be decrypted
+        Public Function decrypt(ByVal inputInBytes() As Byte) As String
 
             'UTFEncoding to turn Byte array into a string
             Dim utf8encoder As UTF8Encoding = New UTF8Encoding()

@@ -7,7 +7,7 @@
                 <asp:Label ID="Label2" runat="server" Text="First Name:"></asp:Label>
             </td>
             <td style="width: 169px">
-                <asp:TextBox ID="f_nameTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="firstNameTB" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -17,7 +17,7 @@
                 <asp:Label ID="Label3" runat="server" Text="Last Name:"></asp:Label>
             </td>
             <td style="width: 169px">
-                <asp:TextBox ID="l_nameTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="lastNameTB" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -27,7 +27,7 @@
                 <asp:Label ID="Label4" runat="server" Text="Address 1:"></asp:Label>
             </td>
             <td style="width: 169px">
-                <asp:TextBox ID="address_oneTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="addressOneTB" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -37,7 +37,7 @@
                 <asp:Label ID="Label5" runat="server" Text="Address2"></asp:Label>
             </td>
             <td style="width: 169px">
-                <asp:TextBox ID="address_twoTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="addressTwoTB" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -97,7 +97,7 @@
                 <asp:Label ID="Label11" runat="server" Text="Username:"></asp:Label>
             </td>
             <td style="width: 169px">
-                <asp:TextBox ID="user_nameTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="userNameTB" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -107,7 +107,7 @@
                 <asp:Label ID="Label13" runat="server" Text="Password:"></asp:Label>
             </td>
             <td style="width: 169px">
-                <asp:TextBox ID="user_passwordTB" runat="server"></asp:TextBox>
+                <asp:TextBox ID="userPasswordTB" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -127,7 +127,7 @@
                     NavigateUrl="~/FooterPages/Inforanch_Terms_and_Conditions.pdf">Terms and 
                 Conditions</asp:HyperLink>
 &nbsp;&nbsp;
-                <asp:CheckBox ID="AgreeCB" runat="server" />
+                <asp:CheckBox ID="agreeCB" runat="server" />
             </td>
             <td>
                 &nbsp;</td>
@@ -142,7 +142,7 @@
         </tr>
         <tr>
             <td style="width: 102px">
-                <asp:Button ID="SubmitBTN" runat="server" 
+                <asp:Button ID="submitBTN" runat="server" 
                     Text="Submit" />
             </td>
             <td style="width: 169px">

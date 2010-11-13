@@ -32,13 +32,13 @@ Partial Public Class MemberPageHome
     Protected WithEvents selectDBHead As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''UserDatabasesDD control.
+    '''userDatabasesDD control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UserDatabasesDD As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents userDatabasesDD As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''noDBMsg control.

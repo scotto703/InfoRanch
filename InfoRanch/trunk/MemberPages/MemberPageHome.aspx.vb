@@ -1,11 +1,11 @@
 ﻿Imports System.Data
-Imports System.Data.SqlClient
+Imports Npgsql
 
 
 Partial Public Class MemberPageHome
     Inherits System.Web.UI.Page
 
-    Dim DBCmd As New SqlCommand
+    Dim DBCmd As New NpgsqlCommand
    
 
 
@@ -17,32 +17,33 @@ Partial Public Class MemberPageHome
         noDBMsg.Visible = False
 
 
-        Dim UserDatabase = Session("user_id").ToString()
+        Dim userDatabase = Session("user_id").ToString()
+
         ' connection string with the Session variable "user_id"
-        Dim cmd As SqlCommand = New SqlCommand("SELECT List from TableList", New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;" & _
-            "database=" & Session("user_id") & ";server=localhost;Connect Timeout=30"))
+        Dim cmd As NpgsqlCommand = New NpgsqlCommand("SELECT List from TableList", New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
+                                                                                                        userDatabase & ";Timeout=30"))
 
         If Not Page.IsPostBack Then
 
             cmd.Connection.Open()
 
             ' loads the items into the drop-down list
-            UserDatabasesDD.DataSource = cmd.ExecuteReader()
-            UserDatabasesDD.DataTextField = "List"
+            userDatabasesDD.DataSource = cmd.ExecuteReader()
+            userDatabasesDD.DataTextField = "List"
 
-            UserDatabasesDD.DataValueField = "List"
+            userDatabasesDD.DataValueField = "List"
 
-            UserDatabasesDD.DataBind()
+            userDatabasesDD.DataBind()
         End If
 
         cmd.Connection.Close()
         cmd.Connection.Dispose()
 
-        Dim CountDB = UserDatabasesDD.Items.Count
+        Dim CountDB = userDatabasesDD.Items.Count
 
         ' if there are no items in the database, then then label3.text appears
         If CountDB < 1 Then
-            UserDatabasesDD.Visible = False
+            userDatabasesDD.Visible = False
             SubmitBTN.Visible = False
             noDBMsg.Visible = True
             selectDBHead.Visible = False
@@ -50,7 +51,7 @@ Partial Public Class MemberPageHome
 
     End Sub
 
-    
+
 
 
 
@@ -60,9 +61,9 @@ Partial Public Class MemberPageHome
 
         ' assigns the selected item value to the Session variable and 
         ' redirects to UserDatabasePage.aspx
-        Session("user_table") = UserDatabasesDD.SelectedValue.ToString
+        Session("user_table") = userDatabasesDD.SelectedValue.ToString
 
-        Server.Transfer("~/MemberPages/UserDatabasePage.aspx", True)
+        Server.Transfer("~/MemberPages/DataBasePage.aspx", True)
 
 
     End Sub
