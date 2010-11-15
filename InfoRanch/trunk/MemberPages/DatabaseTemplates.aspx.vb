@@ -1,18 +1,17 @@
 ﻿Imports System.Data
-Imports System.Data.SqlClient
+Imports Npgsql
 
 Partial Public Class DatabaseTemplates
     Inherits System.Web.UI.Page
 
-    Dim DBCmd = New SqlCommand
+    Dim DBCmd = New NpgsqlCommand
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
 
         ' connects to the templates database
 
-        SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
-                                  "database=templates_database;server=localhost;Connect Timeout=30"
-
+        SqlDataSource1.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=templates_database;Timeout=30"
+        SqlDataSource1.ProviderName = "Npgsql"
 
         ' queries the database names and loads the results to the radio button list
         SqlDataSource1.SelectCommand = "SELECT fields FROM template_names"
