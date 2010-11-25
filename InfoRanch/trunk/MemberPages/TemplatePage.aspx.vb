@@ -1,5 +1,5 @@
 ﻿Imports System.Data
-Imports System.Data.SqlClient
+Imports Npgsql
 Imports InfoRanch.DB
 
 
@@ -10,16 +10,15 @@ Partial Public Class TemplatePage
     Dim newDB As New DBTemplate
     Dim dataTypeList As New ArrayList
     Dim sortOrderList As New List(Of Integer)
-    Dim DBCmd As New SqlCommand
+    Dim DBCmd As New NpgsqlCommand
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'set newDB name field to session variable "template_selection"
         newDB.setName(Session("template_selection"))
 
         ' connection to DB to list fields in fieldList checkboxes
-        SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;" & _
-                                  "database=templates_database;server=localhost;Connect Timeout=30"
-
+        SqlDataSource1.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=templates_database;Timeout=30"
+        SqlDataSource1.ProviderName = "Npgsql"
 
         ' selects the template field names and loads the results to the checkbox list
         SqlDataSource1.SelectCommand = "SELECT fields FROM " & newDB.getName() & " ORDER BY sortorder"
@@ -28,16 +27,15 @@ Partial Public Class TemplatePage
         fieldSelectHeader2.Text = "want to include with your " & newDB.getName() & " information."
 
         'Connect to templates_database to get the list of datatypes for the fields
-        Dim DBConn As New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;" & _
-                                        "database=templates_database;server=localhost;Connect Timeout=30")
+        Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=templates_database;Timeout=30")
 
         DBConn.Open()
 
         'Select the datatypes from the database
-        DBCmd = New SqlCommand("SELECT datatypes,sortorder FROM " & newDB.getName() & " ORDER BY sortorder", DBConn)
+        DBCmd = New NpgsqlCommand("SELECT datatypes,sortorder FROM " & newDB.getName() & " ORDER BY sortorder", DBConn)
 
         'Read data from database
-        Dim dataTypesReader As SqlDataReader = DBCmd.ExecuteReader()
+        Dim dataTypesReader As NpgsqlDataReader = DBCmd.ExecuteReader()
 
         'Populate dataTypeList
         While dataTypesReader.Read()
@@ -53,12 +51,8 @@ Partial Public Class TemplatePage
     Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
 
         ' connects to the user's DB
-        Dim DBConn As New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;" & _
-                                 "database=" & Session("user_id") & ";server=localhost;Connect Timeout=30")
-
-
-
-
+        Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
+                                           Session("user_id") & ";Timeout=30")
 
         Dim itemCount As Integer
 
@@ -80,7 +74,7 @@ Partial Public Class TemplatePage
         DBConn.Open()
 
         'Add new DB into TableList
-        DBCmd = New SqlCommand("INSERT INTO TableList VALUES('" & newDB.getName() & "')", DBConn)
+        DBCmd = New NpgsqlCommand("INSERT INTO TableList VALUES('" & newDB.getName() & "')", DBConn)
         DBCmd.ExecuteNonQuery()
 
         'Generate string for user database table creation
@@ -88,23 +82,24 @@ Partial Public Class TemplatePage
         For i = 0 To count - 1
             createDB &= newDB.getField(i) & " " & newDB.getDataType(i) & ","
         Next
-        createDB &= "ID int)"
+        createDB &= "ID serial PRIMARY KEY)"
 
         'Create new table for user DB
-        DBCmd = New SqlCommand(createDB, DBConn)
+        DBCmd = New NpgsqlCommand(createDB, DBConn)
         DBCmd.ExecuteNonQuery()
 
         'Create FieldList table for new user db
-        DBCmd = New SqlCommand("CREATE TABLE FieldList" & newDB.getName() & "(" & newDB.getName() & " nvarchar(50), sortorder int)", DBConn)
+        DBCmd = New NpgsqlCommand("CREATE TABLE FieldList" & newDB.getName() & "(" & newDB.getName() & " varchar(50), datatype varchar(50), sortorder int)", DBConn)
         DBCmd.ExecuteNonQuery()
 
         'Populate FieldList
         For i = 0 To count - 1
-            DBCmd = New SqlCommand("INSERT INTO FieldList" & newDB.getName() & " VALUES('" & newDB.getField(i) & "'," & newDB.getSortOrder(i) & ")", DBConn)
+            DBCmd = New NpgsqlCommand("INSERT INTO FieldList" & newDB.getName() & " VALUES('" & newDB.getField(i) & "', '" & _
+                                      newDB.getDataType(i) & "', " & newDB.getSortOrder(i) & ")", DBConn)
             DBCmd.ExecuteNonQuery()
         Next
 
-        DBCmd = New SqlCommand("INSERT INTO FieldList" & newDB.getName() & " Values('ID', 200)", DBConn)
+        DBCmd = New NpgsqlCommand("INSERT INTO FieldList" & newDB.getName() & " Values('ID', 'serial', 200)", DBConn)
         DBCmd.ExecuteNonQuery()
 
         DBConn.Close()
