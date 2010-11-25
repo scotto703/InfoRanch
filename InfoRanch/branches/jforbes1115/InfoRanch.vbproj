@@ -99,10 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bull_Ride.jpg" />
+    <Content Include="MemberPages\AddEdit.aspx" />
     <Content Include="MemberPages\DataBasePage.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataTemplate.vb" />
     <Compile Include="Classes\DBTemplate.vb" />
     <Compile Include="Classes\Encryption.vb" />
     <Compile Include="FooterPages\AboutUsPage.aspx.designer.vb">
@@ -139,6 +142,13 @@
     <Compile Include="InfoRanch.aspx.vb">
       <DependentUpon>InfoRanch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\AddEdit.aspx.designer.vb">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\AddEdit.aspx.vb">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="MemberPages\CustomDataBase.aspx.designer.vb">
       <DependentUpon>CustomDataBase.aspx</DependentUpon>
@@ -225,6 +235,13 @@
       <DependentUpon>MemberPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -279,7 +296,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3803</DevelopmentServerPort>
+          <DevelopmentServerPort>64786</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/InfoRanch</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
