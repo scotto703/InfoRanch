@@ -39,11 +39,6 @@ Public Class DataBasePage
 		tableValues.Close()
 		DBConn.Close()
 
-        'SqlDataSource1.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & userID & ";Timeout=30"
-        'SqlDataSource1.ProviderName = "Npgsql"
-        'SqlDataSource1.SelectCommand = "SELECT ID, " & titleField & " FROM " & userTable
-
-
     End Sub
 
 
