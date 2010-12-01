@@ -25,12 +25,23 @@ Public Class DataBasePage
 
         Dim titleField As String = dbReader(0)
 
-        dbReader.Close()
-        DBConn.Close()
+		dbReader.Close()
 
-        SqlDataSource1.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & userID & ";Timeout=30"
-        SqlDataSource1.ProviderName = "Npgsql"
-        SqlDataSource1.SelectCommand = "SELECT ID, " & titleField & " FROM " & userTable
+		DBCom = New NpgsqlCommand("SELECT ID, " & titleField & " FROM " & userTable, DBConn)
+
+		Dim tableValues As NpgsqlDataReader = DBCom.ExecuteReader
+		Dim dt As DataTable = New DataTable()
+
+		dt.Load(tableValues)
+		stallContents.DataSource = dt
+		stallContents.DataBind()
+
+		tableValues.Close()
+		DBConn.Close()
+
+        'SqlDataSource1.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & userID & ";Timeout=30"
+        'SqlDataSource1.ProviderName = "Npgsql"
+        'SqlDataSource1.SelectCommand = "SELECT ID, " & titleField & " FROM " & userTable
 
 
     End Sub

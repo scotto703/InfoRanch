@@ -126,8 +126,8 @@ Partial Public Class Query
 		' Bind data to the searchResults gridview control
 
 		Dim srchResults As NpgsqlDataReader = DBCmd.ExecuteReader()
-
 		Dim dt As DataTable = New DataTable()
+
 		dt.Load(srchResults)
 		searchResults.DataSource = dt
 		searchResults.DataBind()
