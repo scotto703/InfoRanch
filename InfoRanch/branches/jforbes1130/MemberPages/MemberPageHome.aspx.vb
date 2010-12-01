@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports Npgsql
+Imports InfoRanch.DB
 
 
 Partial Public Class MemberPageHome
@@ -18,14 +19,17 @@ Partial Public Class MemberPageHome
 
 
         Dim userDatabase = Session("user_id").ToString()
+		Dim DbConn As New NpgsqlConnection
+		Dim myCon As New DBConnection
+
+		DbConn = myCon.connect(userDatabase)
 
         ' connection string with the Session variable "user_id"
-        Dim cmd As NpgsqlCommand = New NpgsqlCommand("SELECT List from TableList", New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
-                                                                                                        userDatabase & ";Timeout=30"))
+		Dim cmd As NpgsqlCommand = New NpgsqlCommand("SELECT List from TableList", DbConn)
 
         If Not Page.IsPostBack Then
 
-            cmd.Connection.Open()
+			DbConn.Open()
 
             ' loads the items into the drop-down list
             userDatabasesDD.DataSource = cmd.ExecuteReader()
@@ -36,8 +40,8 @@ Partial Public Class MemberPageHome
             userDatabasesDD.DataBind()
         End If
 
-        cmd.Connection.Close()
-        cmd.Connection.Dispose()
+		DbConn.Close()
+		DbConn.Dispose()
 
         Dim CountDB = userDatabasesDD.Items.Count
 

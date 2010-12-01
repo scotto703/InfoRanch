@@ -32,6 +32,15 @@ Partial Public Class DataBasePage
 	Protected WithEvents returnButton As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
+	'''queryBtn control.
+	'''</summary>
+	'''<remarks>
+	'''Auto-generated field.
+	'''To modify move field declaration from designer file to code-behind file.
+	'''</remarks>
+	Protected WithEvents queryBtn As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
 	'''stallContents control.
 	'''</summary>
 	'''<remarks>

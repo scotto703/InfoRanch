@@ -50,7 +50,7 @@
         </tr>
         <tr>
             <td>
-                <asp:DropDownList ID="userDatabasesDD" runat="server" AutoPostBack="True" 
+                <asp:DropDownList ID="userDatabasesDD" runat="server" 
                     Font-Bold="True" Font-Names="Arial" Font-Size="Medium" 
                     Width="151px">
                 </asp:DropDownList>

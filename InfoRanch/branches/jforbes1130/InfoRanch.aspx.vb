@@ -1,17 +1,19 @@
 ﻿Imports System.Data
 Imports Npgsql
 Imports InfoRanch.Util
+Imports InfoRanch.DB
 
 Partial Public Class InfoRanch
     Inherits System.Web.UI.Page
 
     ' Connection string to the administration DB
 
-    Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=administration;Timeout=30")
+	Dim DBConn As NpgsqlConnection
     Dim DBCmd As New NpgsqlCommand
     Dim DBAdap As New NpgsqlDataAdapter
     Dim DS As New DataSet
-    Dim encrypted As New Encryption
+	Dim encrypted As New Encryption
+	Dim connect As New DBConnection
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -21,7 +23,9 @@ Partial Public Class InfoRanch
     Protected Sub Submit_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
 
         Dim dr As NpgsqlDataReader
-        DBConn.Open()
+
+		DBConn = connect.connect("administration")
+		DBConn.Open()
 
         ' query the member authentication table
         Dim sql As NpgsqlCommand = New NpgsqlCommand("SELECT * FROM member_authentication WHERE user_name ='" _
