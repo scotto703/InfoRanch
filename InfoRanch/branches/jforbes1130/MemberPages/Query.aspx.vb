@@ -118,7 +118,7 @@ Partial Public Class Query
 
 		' Set up query using parameters
 
-		DBCmd = New NpgsqlCommand("select id, " & dataTemplate.getField(0) & " from " & Session("user_table") & " where " & selectedValue & whereClause & "@searchValue", DBConn)
+		DBCmd = New NpgsqlCommand("select id, " & Replace(dataTemplate.getField(0), " ", "_") & " from " & Session("user_table") & " where " & selectedValue & whereClause & "@searchValue", DBConn)
 		DBCmd.Parameters.AddWithValue("@searchValue", searchValue)
 
 		DBConn.Open()

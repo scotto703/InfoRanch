@@ -100,6 +100,7 @@
   <ItemGroup>
     <Content Include="Bull_Ride.jpg" />
     <Content Include="MemberPages\AddEdit.aspx" />
+    <Content Include="MemberPages\CustomConfirm.aspx" />
     <Content Include="MemberPages\DataBasePage.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="MemberPages\AddEdit.aspx.vb">
       <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomConfirm.aspx.designer.vb">
+      <DependentUpon>CustomConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomConfirm.aspx.vb">
+      <DependentUpon>CustomConfirm.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="MemberPages\CustomDataBase.aspx.designer.vb">

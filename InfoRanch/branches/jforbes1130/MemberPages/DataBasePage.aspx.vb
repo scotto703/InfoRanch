@@ -24,6 +24,7 @@ Public Class DataBasePage
         dbReader.Read()
 
         Dim titleField As String = dbReader(0)
+		titleField = Replace(titleField, " ", "_")
 
 		dbReader.Close()
 
