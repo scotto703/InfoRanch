@@ -17,6 +17,7 @@ Public Class AddEdit
 
 		Dim dbConn As New NpgsqlConnection
 		Dim dbCom As New NpgsqlCommand
+		Dim myCon As New DBConnection
 		Dim mode As String = "add"
 
 		coralTemplate.setName(Session("user_table"))
@@ -38,8 +39,8 @@ Public Class AddEdit
 		End If
 
 		'Create connection to get list of fields into fieldList string
-		dbConn.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
-		   Session("user_id") & ";Timeout=30"
+		dbConn = myCon.connect(Session("user_id"))
+
 		dbCom = New NpgsqlCommand("SELECT " & coralTemplate.getName() & ", datatype, sortorder FROM fieldlist" & coralTemplate.getName() & " WHERE " & _
 		  coralTemplate.getName() & "<> 'ID' ORDER BY sortorder", dbConn)
 		dbConn.Open()
@@ -100,16 +101,16 @@ Public Class AddEdit
 			Case "edit"
 				updateButton.Visible = True
 				deleteButton.Visible = True
-				resetButton.Visible = True
 			Case Else
 				editButton.Visible = True
 				deleteButton.Visible = True
 		End Select
 	End Sub
 
-	' Transfer the page back to the database home page
+	' Transfer the page back to the previous page
 	Private Sub goodbye()
-		Response.Redirect("~/MemberPages/DataBasePage.aspx")
+		Dim prevPage As String = Request.UrlReferrer.ToString()
+		Response.Redirect(prevPage)
 	End Sub
 
 	' Recursively checks every control to see if it is a textbox and if it is
@@ -138,11 +139,11 @@ Public Class AddEdit
 	End Sub
 
 	Protected Sub deleteButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles deleteButton.Click
-		Dim dbConn As NpgsqlConnection
+		Dim dbConn As New NpgsqlConnection
 		Dim dbCom As NpgsqlCommand
+		Dim myCon As New DBConnection
 
-		dbConn = New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
-		   Session("user_id") & ";Timeout=30")
+		dbConn = myCon.connect(Session("user_id"))
 		dbCom = New NpgsqlCommand("DELETE FROM " & coralTemplate.getName() & " WHERE id = " & Request.QueryString.Get("ID"), dbConn)
 
 		dbConn.Open()
@@ -177,11 +178,11 @@ Public Class AddEdit
 
 		' Create connection and run query
 
-		Dim dbConn As NpgsqlConnection
+		Dim dbConn As New NpgsqlConnection
 		Dim dbCom As NpgsqlCommand
+		Dim myCon As New DBConnection
 
-		dbConn = New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
-		   Session("user_id") & ";Timeout=30")
+		dbConn = myCon.connect(Session("user_id"))
 		dbCom = New NpgsqlCommand("INSERT INTO " & coralTemplate.getName() & " (" & fieldString & ") VALUES (" & _
 		  paramString & ")", dbConn)
 
@@ -263,11 +264,11 @@ Public Class AddEdit
 
 		' Open database connection and run query
 
-		Dim dbConn As NpgsqlConnection
+		Dim dbConn As New NpgsqlConnection()
 		Dim dbCom As NpgsqlCommand
+		Dim myCon As New DBConnection
 
-		dbConn = New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
-		   Session("user_id") & ";Timeout=30")
+		dbConn = myCon.connect(Session("user_id"))
 		dbCom = New NpgsqlCommand(updateString, dbConn)
 
 

@@ -27,7 +27,10 @@ Partial Public Class TemplatePage
         fieldSelectHeader2.Text = "want to include with your " & newDB.getName() & " information."
 
         'Connect to templates_database to get the list of datatypes for the fields
-        Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=templates_database;Timeout=30")
+		Dim DBConn As New NpgsqlConnection
+		Dim myCon As New DBConnection
+
+		DBConn = myCon.connect("templaes_database")
 
         DBConn.Open()
 
@@ -51,8 +54,10 @@ Partial Public Class TemplatePage
     Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
 
         ' connects to the user's DB
-        Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & _
-                                           Session("user_id") & ";Timeout=30")
+        Dim DBConn As New NpgsqlConnection
+		Dim myCon As New DBConnection
+
+		DBConn = myCon.connect(Session("user_id"))
 
         Dim itemCount As Integer
 
@@ -63,7 +68,7 @@ Partial Public Class TemplatePage
         Dim i As Integer
         For i = 0 To (itemCount - 1)
             If fieldList.Items(i).Selected = True Then
-                Dim newString = Replace(fieldList.Items(i).Value, " ", "")
+				Dim newString = Replace(fieldList.Items(i).Value, " ", "_")
                 newDB.addItem(newString, dataTypeList(i), sortOrderList(i))
             End If
         Next i

@@ -13,9 +13,9 @@ Public Class DataBasePage
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim userID As String = Session("user_id")
         Dim userTable As String = Session("user_table")
+		Dim myCon As New DBConnection
 
-        DBConn.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" &
-            userID & ";Timeout=30"
+		DBConn = myCon.connect(userID)
         DBConn.Open()
 
         DBCom = New NpgsqlCommand("SELECT " & userTable & " FROM FieldList" & userTable & " ORDER BY sortorder", DBConn)
@@ -24,14 +24,21 @@ Public Class DataBasePage
         dbReader.Read()
 
         Dim titleField As String = dbReader(0)
+		titleField = Replace(titleField, " ", "_")
 
-        dbReader.Close()
-        DBConn.Close()
+		dbReader.Close()
 
-        SqlDataSource1.ConnectionString = "Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=" & userID & ";Timeout=30"
-        SqlDataSource1.ProviderName = "Npgsql"
-        SqlDataSource1.SelectCommand = "SELECT ID, " & titleField & " FROM " & userTable
+		DBCom = New NpgsqlCommand("SELECT ID, " & titleField & " FROM " & userTable, DBConn)
 
+		Dim tableValues As NpgsqlDataReader = DBCom.ExecuteReader
+		Dim dt As DataTable = New DataTable()
+
+		dt.Load(tableValues)
+		stallContents.DataSource = dt
+		stallContents.DataBind()
+
+		tableValues.Close()
+		DBConn.Close()
 
     End Sub
 
@@ -40,6 +47,7 @@ Public Class DataBasePage
 
 		If e.Row.RowType = DataControlRowType.Header Then
 			e.Row.Cells(1).Visible = False
+			e.Row.Cells(2).Text = StrConv(e.Row.Cells(2).Text, VbStrConv.ProperCase)
 		End If
 
 		If e.Row.RowType = DataControlRowType.DataRow Then
@@ -61,5 +69,9 @@ Public Class DataBasePage
 
 	Protected Sub returnButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles returnButton.Click
 		Server.Transfer("~/MemberPages/MemberPageHome.aspx")
+	End Sub
+
+	Protected Sub queryBtn_Click(ByVal sender As Object, ByVal e As EventArgs) Handles queryBtn.Click
+		Server.Transfer("~/MemberPages/Query.aspx")
 	End Sub
 End Class

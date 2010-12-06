@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports Npgsql
 Imports InfoRanch.Util
+Imports InfoRanch.DB
 
 Partial Public Class RegisterPage
     Inherits System.Web.UI.Page
@@ -17,7 +18,10 @@ Partial Public Class RegisterPage
     Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles submitBTN.Click
 
         ' Connection String to the administration database
-        Dim DBConn As New NpgsqlConnection("Server=localhost;Port=5432;Userid=inforanch;password=inforanch;Database=administration;Timeout=30")
+		Dim DBConn As New NpgsqlConnection
+		Dim myCon As New DBConnection
+
+		DBConn = myCon.connect("administration")
 
         DBConn.Open()
 

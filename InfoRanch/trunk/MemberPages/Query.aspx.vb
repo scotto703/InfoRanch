@@ -1,140 +1,239 @@
 ﻿Imports System.Data
-Imports System.Data.SqlClient
+Imports Npgsql
 Imports System.IO
-
+Imports InfoRanch.DB
 
 
 
 Partial Public Class Query
     Inherits System.Web.UI.Page
-    Dim DBCmd = New SqlCommand
-
-
-
-
+	Dim dataTemplate As New DBTemplate
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+		Dim dbConn As New NpgsqlConnection
+		Dim myCon As New DBConnection
+		Dim dbCom As New NpgsqlCommand
 
-        SearchTB.Focus()
-        NewSearchBTN.Visible = False
-        Cancel2BTN.Visible = False
+		dataTemplate.setName(Session("user_id"))
 
-        Label4.Text = Session("user_table") & " Information"
+		dbConn = myCon.connect(Session("user_id"))
 
-        ' connects to the user database
-        SqlDataSource1.ConnectionString = "Persist Security Info=False;Integrated Security=SSPI;database=" & Session("user_id") & ";server=localhost;Connect Timeout=30"
+		' Get information about current table to be used determine what limiters are shown
 
-        ' loads the query results to the drop down list
-        SqlDataSource1.SelectCommand = "SELECT " & Session("user_table") & " From FieldList" & Session("user_table") & " where " & Session("user_table") & " <> 'ID'"
+		dbCom = New NpgsqlCommand("SELECT " & Session("user_table") & ",datatype,sortorder FROM fieldlist" & Session("user_table") & " WHERE " & _
+		  Session("user_table") & " <> 'ID' ORDER BY sortorder", dbConn)
 
-        If Not Page.IsPostBack Then
-            DropDownList1.Visible = True
-            Dim DBConn As New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;" & _
-                                      "database=" & Session("user_id") & ";server=localhost;Connect Timeout=30")
+		dbConn.Open()
 
-            DBCmd = New SqlCommand("SELECT " & Session("user_table") & " From FieldList" & Session("user_table") & " where " & Session("user_table") & " <> 'ID'", DBConn)
-            DBConn.Open()
+		Dim dbReader As NpgsqlDataReader = dbCom.ExecuteReader()
 
+		While dbReader.Read()
+			dataTemplate.addItem(dbReader(0), dbReader(1), dbReader(2))
+		End While
 
-            DropDownList1.DataSource = DBCmd.ExecuteReader()
+		dbReader.Close()
+		dbConn.Close()
 
-            DropDownList1.DataTextField = "" & Session("user_table") & ""
+		' Set up page for query
 
-            DropDownList1.DataValueField = "" & Session("table_table") & ""
+		searchTB.Focus()
+		NewSearchBTN.Visible = False
+		Cancel2BTN.Visible = False
 
+		welcomeLbl.Text = StrConv(Session("user_table"), VbStrConv.ProperCase) & " Information"
 
-            DropDownList1.DataBind()
+		If Not Page.IsPostBack Then
 
-            DBConn.Close()
-            DBConn.Dispose()
+			fieldDropDown.Visible = True
 
-        End If
+			' Populate field drop down list
 
-    End Sub
-    Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
+			dbCom = New NpgsqlCommand("SELECT " & Session("user_table") & " From FieldList" & Session("user_table") & " where " & Session("user_table") & " <> 'ID' Order By sortorder", dbConn)
+			dbConn.Open()
 
+			fieldDropDown.DataSource = dbCom.ExecuteReader()
 
-        GridView1.Visible = True
+			fieldDropDown.DataTextField = "" & Session("user_table") & ""
 
-        SubmitBTN.Visible = False
-        Cancel1.Visible = False
-        NewSearchBTN.Visible = True
-        Cancel2BTN.Visible = True
-
-
-        DropDownList1.Visible = False
-        Label2.Visible = False
-        Label3.Visible = False
-
-        SearchTB.Visible = False
+			fieldDropDown.DataValueField = "" & Session("table_table") & ""
 
 
+			fieldDropDown.DataBind()
 
-        Dim SelectedValue = DropDownList1.SelectedValue()
+			dbConn.Close()
+			dbConn.Dispose()
+			
 
+		End If
 
+	End Sub
 
-        Dim SearchValue = SearchTB.Text
+	Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
+		Dim DBCmd As New NpgsqlCommand
 
+		' Hide and show appropriate controls
 
-        Dim DBConn As New SqlConnection("Persist Security Info=False;Integrated Security=SSPI;" & _
-                                  "database=" & Session("user_id") & ";server=localhost;Connect Timeout=30")
+		searchResults.Visible = True
 
-
-
-
-        DBCmd = New SqlCommand("select * from " & Session("user_table") & " where " & SelectedValue & " = '" & SearchValue & "'", DBConn)
-
-
-
-        DBConn.Open()
-
-        Dim drEmployee As SqlDataReader = DBCmd.ExecuteReader()
-
-        Dim dt As DataTable = New DataTable()
-        dt.Load(drEmployee)
-        GridView1.DataSource = dt
-        GridView1.DataBind()
+		SubmitBTN.Visible = False
+		Cancel1.Visible = False
+		NewSearchBTN.Visible = True
+		Cancel2BTN.Visible = True
 
 
+		fieldDropDown.Visible = False
+		limitDropDown.Visible = False
+		thatLabel.Visible = False
+		searchByLbl.Visible = False
 
-        '
-        'Closing the data reader & connection object
-        drEmployee.Close()
-        DBConn.Close()
+		searchTB.Visible = False
 
+		' Query logic starts here
+		' Initialize required variables
 
+		Dim selectedValue = fieldDropDown.SelectedValue()
+		Dim searchValue = searchTB.Text
+		Dim whereClause As String
+		Dim DBConn As New NpgsqlConnection
+		Dim MyCon As New DBConnection
+		DBConn = MyCon.connect(Session("user_id"))
 
-       
+		' Determine what limiter is chosen
 
+		Select Case (limitDropDown.SelectedIndex)
+			Case 0
+				whereClause = "="
+			Case 1
+				whereClause = "<"
+			Case 2
+				whereClause = ">"
+			Case 3
+				whereClause = "<="
+			Case 4
+				whereClause = ">="
+			Case Else
+				whereClause = " LIKE "
+				searchValue = "%" & searchValue & "%"
+		End Select
 
+		' Set up query using parameters
 
+		DBCmd = New NpgsqlCommand("select id, " & Replace(dataTemplate.getField(0), " ", "_") & " from " & Session("user_table") & " where " & selectedValue & whereClause & "@searchValue", DBConn)
+		DBCmd.Parameters.AddWithValue("@searchValue", searchValue)
 
+		DBConn.Open()
 
+		' Bind data to the searchResults gridview control
 
+		Dim srchResults As NpgsqlDataReader = DBCmd.ExecuteReader()
+		Dim dt As DataTable = New DataTable()
 
-    End Sub
+		dt.Load(srchResults)
+		searchResults.DataSource = dt
+		searchResults.DataBind()
 
-    Protected Sub ClearBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles NewSearchBTN.Click
-        SearchTB.Text = ""
-        GridView1.Visible = False
-        SubmitBTN.Visible = True
-        NewSearchBTN.Visible = False
-        DropDownList1.Visible = True
-        Label2.Visible = True
-        SearchTB.Visible = True
+		'Closing the data reader & connection object
+		srchResults.Close()
+		DBConn.Close()
+	End Sub
 
-    End Sub
+	Protected Sub ClearBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles NewSearchBTN.Click
+		searchTB.Text = ""
+		searchResults.Visible = False
+		SubmitBTN.Visible = True
+		NewSearchBTN.Visible = False
+		fieldDropDown.Visible = True
+		thatLabel.Visible = True
+		searchByLbl.Visible = True
+		limitDropDown.Visible = True
+		searchTB.Visible = True
+
+	End Sub
 
     Protected Sub Cancel1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel1.Click
-        Server.Transfer("~/MemberPages/UserDatabasePage.aspx", True)
+		Server.Transfer("~/MemberPages/DataBasePage.aspx", True)
     End Sub
 
     Protected Sub Cancel2BTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel2BTN.Click
-        Server.Transfer("~/MemberPages/UserDatabasePage.aspx", True)
+		Server.Transfer("~/MemberPages/DataBasePage.aspx", True)
     End Sub
 
-   
-    
-    
+	Private Sub fieldDropDown_DataBound(ByVal sender As Object, ByVal e As System.EventArgs) Handles fieldDropDown.DataBound
+		Dim selectedValue = fieldDropDown.SelectedValue
+
+		limitDropDown.Items.Clear()
+
+		limitDropDown.Items.Add("Equals ")
+		limitDropDown.Items.Add("Is Less Than ")
+		limitDropDown.Items.Add("Is Greater Than ")
+		limitDropDown.Items.Add("Is Less Than or Equals ")
+		limitDropDown.Items.Add("Is Greater Than or Equals ")
+
+		For i As Integer = 0 To dataTemplate.length - 1
+
+			If selectedValue = dataTemplate.getField(i) Then
+
+				If dataTemplate.getDataType(i).Length > 3 Then
+
+					Select Case (dataTemplate.getDataType(i).Substring(0, 4))
+						Case "varc"
+							limitDropDown.Items.Add("Contains ")
+						Case "text"
+							limitDropDown.Items.Add("Contains ")
+					End Select
+
+				End If
+
+			End If
+
+		Next
+	End Sub
+
+	Private Sub fieldDropDown_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles fieldDropDown.SelectedIndexChanged
+		Dim selectedValue = fieldDropDown.SelectedValue
+
+		limitDropDown.Items.Clear()
+
+		limitDropDown.Items.Add("Equals ")
+		limitDropDown.Items.Add("Is Less Than ")
+		limitDropDown.Items.Add("Is Greater Than ")
+		limitDropDown.Items.Add("Is Less Than or Equals ")
+		limitDropDown.Items.Add("Is Greater Than or Equals ")
+
+		For i As Integer = 0 To dataTemplate.length - 1
+
+			If selectedValue = dataTemplate.getField(i) Then
+
+				If dataTemplate.getDataType(i).Length > 3 Then
+
+					Select Case (dataTemplate.getDataType(i).Substring(0, 4))
+						Case "varc"
+							limitDropDown.Items.Add("Contains ")
+						Case "text"
+							limitDropDown.Items.Add("Contains ")
+					End Select
+
+				End If
+
+			End If
+
+		Next
+	End Sub
+
+	Private Sub searchResults_RowCreated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles searchResults.RowCreated
+		If e.Row.RowType = DataControlRowType.Header Then
+			e.Row.Cells(1).Visible = False
+			e.Row.Cells(2).Text = StrConv(e.Row.Cells(2).Text, VbStrConv.ProperCase)
+		End If
+
+		If e.Row.RowType = DataControlRowType.DataRow Then
+			e.Row.Cells(1).Visible = False
+		End If
+	End Sub
+
+	Private Sub searchResults_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles searchResults.SelectedIndexChanged
+		Dim row As GridViewRow = searchResults.SelectedRow
+
+		Server.Transfer("~/MemberPages/AddEdit.aspx?ID=" & row.Cells(1).Text, True)
+	End Sub
 End Class
