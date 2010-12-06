@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7A5EEDA-4612-45F8-9804-1F47D3EAEA47}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InfoRanch</RootNamespace>
+    <AssemblyName>InfoRanch</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>InfoRanch.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>InfoRanch.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Npgsql\ms.net4.0\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.10.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Npgsql\ms.net4.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.DynamicData\3.5.0.0__31bf3856ad364e35\System.Web.DynamicData.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bull_Ride.jpg" />
+    <Content Include="MemberPages\AddEdit.aspx" />
+    <Content Include="MemberPages\CustomConfirm.aspx" />
+    <Content Include="MemberPages\DataBasePage.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DataTemplate.vb" />
+    <Compile Include="Classes\DBConnection.vb" />
+    <Compile Include="Classes\DBTemplate.vb" />
+    <Compile Include="Classes\Encryption.vb" />
+    <Compile Include="FooterPages\AboutUsPage.aspx.designer.vb">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\AboutUsPage.aspx.vb">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\ContactUsPage.aspx.designer.vb">
+      <DependentUpon>ContactUsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\ContactUsPage.aspx.vb">
+      <DependentUpon>ContactUsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\ForgotPasswordPage.aspx.designer.vb">
+      <DependentUpon>ForgotPasswordPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\ForgotPasswordPage.aspx.vb">
+      <DependentUpon>ForgotPasswordPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\RegisterPage.aspx.designer.vb">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\RegisterPage.aspx.vb">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoRanch.aspx.designer.vb">
+      <DependentUpon>InfoRanch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoRanch.aspx.vb">
+      <DependentUpon>InfoRanch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\AddEdit.aspx.designer.vb">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\AddEdit.aspx.vb">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomConfirm.aspx.designer.vb">
+      <DependentUpon>CustomConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomConfirm.aspx.vb">
+      <DependentUpon>CustomConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomDataBase.aspx.designer.vb">
+      <DependentUpon>CustomDataBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomDataBase.aspx.vb">
+      <DependentUpon>CustomDataBase.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\DataBasePage.aspx.designer.vb">
+      <DependentUpon>DataBasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\DataBasePage.aspx.vb">
+      <DependentUpon>DataBasePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\DatabaseTemplates.aspx.designer.vb">
+      <DependentUpon>DatabaseTemplates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\DatabaseTemplates.aspx.vb">
+      <DependentUpon>DatabaseTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\MemberPageHome.aspx.designer.vb">
+      <DependentUpon>MemberPageHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\MemberPageHome.aspx.vb">
+      <DependentUpon>MemberPageHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\Query.aspx.designer.vb">
+      <DependentUpon>Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\Query.aspx.vb">
+      <DependentUpon>Query.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\TemplatePage.aspx.designer.vb">
+      <DependentUpon>TemplatePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\TemplatePage.aspx.vb">
+      <DependentUpon>TemplatePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\UpgradeMembershipPage.aspx.designer.vb">
+      <DependentUpon>UpgradeMembershipPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\UpgradeMembershipPage.aspx.vb">
+      <DependentUpon>UpgradeMembershipPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\UserDataBasePage.aspx.designer.vb">
+      <DependentUpon>UserDataBasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\UserDataBasePage.aspx.vb">
+      <DependentUpon>UserDataBasePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PageDesignFiles\InfoRanchGlobal.Master.designer.vb">
+      <DependentUpon>InfoRanchGlobal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PageDesignFiles\InfoRanchGlobal.Master.vb">
+      <DependentUpon>InfoRanchGlobal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PageDesignFiles\MemberPage.master.designer.vb">
+      <DependentUpon>MemberPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="PageDesignFiles\MemberPage.master.vb">
+      <DependentUpon>MemberPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FooterPages\AboutUsPage.aspx" />
+    <Content Include="FooterPages\ContactUsPage.aspx" />
+    <Content Include="FooterPages\ForgotPasswordPage.aspx" />
+    <Content Include="FooterPages\RegisterPage.aspx" />
+    <Content Include="InfoRanch.aspx" />
+    <Content Include="MemberPages\CustomDataBase.aspx" />
+    <Content Include="MemberPages\DatabaseTemplates.aspx" />
+    <Content Include="MemberPages\MemberPageHome.aspx" />
+    <Content Include="MemberPages\Query.aspx" />
+    <Content Include="MemberPages\TemplatePage.aspx" />
+    <Content Include="MemberPages\UpgradeMembershipPage.aspx" />
+    <Content Include="MemberPages\UserDataBasePage.aspx" />
+    <Content Include="PageDesignFiles\SiteCSS.css" />
+    <Content Include="PageDesignFiles\InfoRanchGlobal.Master" />
+    <None Include="FooterPages\Inforanch_Terms_and_Conditions.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="PageDesignFiles\MemberPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64786</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/InfoRanch</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
