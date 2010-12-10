@@ -79,7 +79,7 @@
                     <asp:ListItem Value="text">Long Text</asp:ListItem>
                     <asp:ListItem Value="int">Whole Number</asp:ListItem>
                     <asp:ListItem Value="real">Decimal</asp:ListItem>
-                    <asp:ListItem Value="money">Money</asp:ListItem>
+                    <asp:ListItem Value="numeric(15,2)">Money</asp:ListItem>
                     <asp:ListItem Value="date">Date</asp:ListItem>
                 </asp:DropDownList>
             </td>

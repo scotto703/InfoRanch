@@ -94,7 +94,13 @@ Public Class CustomConfirm
 		For i As Integer = 0 To dbStructure.length - 1
 			dbCmd = New NpgsqlCommand("INSERT INTO fieldlist" & dbStructure.getName() & " VALUES (@field, @datatype, @sortorder)", dbConn)
 			dbCmd.Parameters.AddWithValue("@field", dbStructure.getField(i))
-			dbCmd.Parameters.AddWithValue("@datatype", dbStructure.getDataType(i))
+
+			If dbStructure.getDataType(i) = "money" Then
+				dbCmd.Parameters.AddWithValue("@datatype", "numeric(15,2)")
+			Else
+				dbCmd.Parameters.AddWithValue("@datatype", dbStructure.getDataType(i))
+			End If
+
 			dbCmd.Parameters.AddWithValue("@sortorder", dbStructure.getSortOrder(i))
 			dbCmd.ExecuteNonQuery()
 		Next
@@ -159,7 +165,7 @@ Public Class CustomConfirm
 					e.Row.Cells(1).Text = "Whole Number"
 				Case "real"
 					e.Row.Cells(1).Text = "Decimal"
-				Case "money"
+				Case "numeric(15,2)"
 					e.Row.Cells(1).Text = "Money"
 				Case "date"
 					e.Row.Cells(1).Text = "Date"

@@ -7,9 +7,12 @@
 <asp:Button ID="addButton" runat="server" Text="Add Critter" />
 <asp:Button ID="updateButton" runat="server" Text="Update Critter" />
     <asp:Button ID="editButton" runat="server" Text="Edit Critter" />
-<asp:Button ID="deleteButton" runat="server" Text="Delete Critter" />
-    <asp:Button ID="resetButton" runat="server" Text="Reset" />
-    <asp:Button ID="cancelButton" runat="server" Text="Leave Stall" />
+<asp:Button ID="deleteButton" runat="server" Text="Delete Critter" 
+        CausesValidation="False" />
+    <asp:Button ID="resetButton" runat="server" Text="Reset" 
+        CausesValidation="False" />
+    <asp:Button ID="cancelButton" runat="server" Text="Leave Stall" 
+        CausesValidation="False" />
     <br />
     <br />
     <br />
