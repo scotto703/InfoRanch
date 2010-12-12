@@ -208,13 +208,6 @@
       <DependentUpon>UpgradeMembershipPage.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MemberPages\UserDataBasePage.aspx.designer.vb">
-      <DependentUpon>UserDataBasePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MemberPages\UserDataBasePage.aspx.vb">
-      <DependentUpon>UserDataBasePage.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="PageDesignFiles\InfoRanchGlobal.Master.designer.vb">
       <DependentUpon>InfoRanchGlobal.Master</DependentUpon>
     </Compile>
@@ -272,7 +265,6 @@
     <Content Include="MemberPages\Query.aspx" />
     <Content Include="MemberPages\TemplatePage.aspx" />
     <Content Include="MemberPages\UpgradeMembershipPage.aspx" />
-    <Content Include="MemberPages\UserDataBasePage.aspx" />
     <Content Include="PageDesignFiles\SiteCSS.css" />
     <Content Include="PageDesignFiles\InfoRanchGlobal.Master" />
     <None Include="FooterPages\Inforanch_Terms_and_Conditions.pdf" />

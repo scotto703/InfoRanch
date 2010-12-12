@@ -109,8 +109,7 @@ Public Class AddEdit
 
 	' Transfer the page back to the previous page
 	Private Sub goodbye()
-		Dim prevPage As String = Request.UrlReferrer.ToString()
-		Response.Redirect(prevPage)
+		Response.Redirect("~/MemberPages/DataBasePage.aspx")
 	End Sub
 
 	' Recursively checks every control to see if it is a textbox and if it is
