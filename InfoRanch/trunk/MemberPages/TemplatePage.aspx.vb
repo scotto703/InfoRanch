@@ -30,7 +30,7 @@ Partial Public Class TemplatePage
 		Dim DBConn As New NpgsqlConnection
 		Dim myCon As New DBConnection
 
-		DBConn = myCon.connect("templaes_database")
+        DBConn = myCon.connect("templates_database")
 
         DBConn.Open()
 
