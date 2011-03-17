@@ -3,6 +3,8 @@
     <asp:Button ID="addItemBtn" runat="server" Text="Add New Item" />
     <asp:Button ID="returnButton" runat="server" Text="Change Stall" />
     <asp:Button ID="queryBtn" runat="server" Text="Search Stall" />
+    <asp:Button ID="deleteButton" runat="server" style="margin-bottom: 0px" 
+        Text="Delete Stall" />
     <asp:GridView ID="stallContents" runat="server" AllowPaging="True" 
         AutoGenerateSelectButton="True" Font-Names="Arial">
     </asp:GridView>

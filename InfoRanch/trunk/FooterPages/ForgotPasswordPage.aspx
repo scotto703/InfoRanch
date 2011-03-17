@@ -40,8 +40,7 @@
         </tr>
         <tr>
             <td style="width: 100px">
-                <asp:Button ID="SubmitBTN" runat="server" Text="Submit" 
-                    PostBackUrl="~/InfoRanch.aspx" />
+                <asp:Button ID="SubmitBTN" runat="server" Text="Submit" />
             </td>
             <td>
                 &nbsp;</td>

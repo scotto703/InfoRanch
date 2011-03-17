@@ -8,12 +8,12 @@ Partial Public Class InfoRanch
 
     ' Connection string to the administration DB
 
-	Dim DBConn As NpgsqlConnection
+    Dim DBConn As NpgsqlConnection
     Dim DBCmd As New NpgsqlCommand
     Dim DBAdap As New NpgsqlDataAdapter
     Dim DS As New DataSet
-	Dim encrypted As New Encryption
-	Dim connect As New DBConnection
+    Dim encrypted As New Encryption
+    Dim connect As New DBConnection
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -24,13 +24,14 @@ Partial Public Class InfoRanch
 
         Dim dr As NpgsqlDataReader
 
-		DBConn = connect.connect("administration")
-		DBConn.Open()
+        DBConn = connect.connect("administration")
+        DBConn.Open()
 
         ' query the member authentication table
         Dim sql As NpgsqlCommand = New NpgsqlCommand("SELECT * FROM member_authentication WHERE user_name ='" _
             & userNameTB.Text & "' and user_password = @password", DBConn)
-        sql.Parameters.AddWithValue("@password", encrypted.encrypt(userPasswordTB.Text))
+        sql.Parameters.AddWithValue("@password", Convert.ToBase64String(encrypted.encrypt(userPasswordTB.Text)))
+
 
         dr = sql.ExecuteReader
 
@@ -49,6 +50,8 @@ Partial Public Class InfoRanch
 
         dr.Close()
         DBConn.Close()
+
+
 
     End Sub
 End Class
