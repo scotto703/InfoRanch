@@ -62,6 +62,9 @@
 <div id="footer">
 
 &nbsp; &nbsp;
+<asp:HyperLink ID="HomeHL" runat="server" 
+        NavigateUrl="~/MemberPages/MemberPageHome.aspx">[Home]</asp:HyperLink>
+&nbsp; &nbsp;
 <asp:HyperLink ID="ContactUsHL" runat="server" 
         NavigateUrl="~/FooterPages/ContactUsPage.aspx">[Contact Us]</asp:HyperLink>
 &nbsp; &nbsp; 

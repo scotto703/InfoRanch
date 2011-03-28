@@ -77,7 +77,7 @@
             </td>
             <td style="height: 23px; width: 468px">
                 <asp:DropDownList ID="stateDropDownList1" runat="server" Width="126px">
-                    <asp:ListItem>AK</asp:ListItem>
+                    <asp:ListItem Value="AK">AK</asp:ListItem>
                     <asp:ListItem>AL</asp:ListItem>
                     <asp:ListItem>AR</asp:ListItem>
                     <asp:ListItem>AZ</asp:ListItem>
