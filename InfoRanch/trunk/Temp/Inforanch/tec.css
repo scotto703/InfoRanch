@@ -1,0 +1,45 @@
+/*
+  
+
+   Filename:         tec.css
+   Supporting Files: parch.jpg
+
+*/
+
+body                   {margin: 0px; background-image: url(parch.jpg);
+                        font-family: Arial, Helvetica, sans-serif}
+
+#header                {position: absolute; top: 20px; left: 80px}
+
+#leftColumn            {position: absolute; top: 180px; left: 10px; 
+                        width: 100px; color: rgb(63,56,46)}
+
+#leftColumn h2         {font-size: 14px; margin: 10px 0px 0px 2px;
+                        font-weight: normal}
+
+#leftColumn ul         {list-style-type: none; margin: 0px; padding: 0px;
+                        margin-left: 22px; font-size: 12px}
+
+#leftColumn ul li      {margin: 0px; padding: 0px; line-height: 1.4}
+
+#leftColumn a          {text-decoration: none; color: black}
+
+#leftColumn a:visited  {color: black}
+#leftColumn a:hover    {text-decoration: underline}
+
+#rightColumn           {position: absolute; top: 180px; left: 125px; width: 600px;
+                        font-size: 14px}
+
+#rightColumn h1        {font-size: 24px; margin: 0px; padding: 0px;
+                        text-align: center; font-weight: normal;
+                        letter-spacing: 5px}
+
+#rightColumn p         {text-align: center}
+
+#rightColumn address   {font-size: 10px; font-style: normal; text-align: center;
+                        border-top: 1px solid rgb(63,56,46); margin-bottom: 20px}
+
+
+
+
+

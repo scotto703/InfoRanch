@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PageDesignFiles/MemberPage.master" CodeBehind="CustomDataBase.aspx.vb" Inherits="InfoRanch.CustomDataBase" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PageDesignFiles/MemberPage.master" CodeBehind="CustomDataBaseOld.aspx.vb" Inherits="InfoRanch.CustomDataBase" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table style="width: 100%">
         <tr>
@@ -127,18 +127,18 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
         </tr>
         <tr>
             <td>

@@ -28,8 +28,8 @@ Public Class CustomConfirm
 		Dim dbReader As NpgsqlDataReader = dbCmd.ExecuteReader()
 
 		While dbReader.Read()
-			dbStructure.addItem(dbReader(0), dbReader(1), dbReader(2) * 10)
-		End While
+            dbStructure.addItem(dbReader(0), dbReader(1), dbReader(2) * 10)
+        End While
 		dbReader.Close()
 
 		dbReader = dbCmd.ExecuteReader()
@@ -94,16 +94,15 @@ Public Class CustomConfirm
 		For i As Integer = 0 To dbStructure.length - 1
 			dbCmd = New NpgsqlCommand("INSERT INTO fieldlist" & dbStructure.getName() & " VALUES (@field, @datatype, @sortorder)", dbConn)
 			dbCmd.Parameters.AddWithValue("@field", dbStructure.getField(i))
+            'If dbStructure.getDataType(i) = "money" Then
+            'dbCmd.Parameters.AddWithValue("@datatype", "numeric(15,2)")
+            'Else
+            dbCmd.Parameters.AddWithValue("@datatype", dbStructure.getDataType(i))
+            'End If
 
-			If dbStructure.getDataType(i) = "money" Then
-				dbCmd.Parameters.AddWithValue("@datatype", "numeric(15,2)")
-			Else
-				dbCmd.Parameters.AddWithValue("@datatype", dbStructure.getDataType(i))
-			End If
-
-			dbCmd.Parameters.AddWithValue("@sortorder", dbStructure.getSortOrder(i))
-			dbCmd.ExecuteNonQuery()
-		Next
+            dbCmd.Parameters.AddWithValue("@sortorder", dbStructure.getSortOrder(i))
+            dbCmd.ExecuteNonQuery()
+        Next
 
 		' Create database table
 

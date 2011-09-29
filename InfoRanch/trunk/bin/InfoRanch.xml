@@ -1,0 +1,2664 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+InfoRanch
+</name>
+</assembly>
+<members>
+<member name="F:InfoRanch.CustomComplexConfirm.titleLabel">
+	<summary>
+titleLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexConfirm.instructLabel">
+	<summary>
+instructLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexConfirm.customCoralGrid">
+	<summary>
+customCoralGrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexConfirm.yesNoLael">
+	<summary>
+yesNoLael control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexConfirm.yesButton">
+	<summary>
+yesButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexConfirm.noButton">
+	<summary>
+noButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage.welcomeMsg">
+	<summary>
+welcomeMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage.selectDBHead">
+	<summary>
+selectDBHead control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage.userDatabasesDD">
+	<summary>
+userDatabasesDD control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage.noDBMsg">
+	<summary>
+noDBMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage.deleteButton">
+	<summary>
+deleteButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.coralCnameLabel">
+	<summary>
+coralCnameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.stallNameLabel">
+	<summary>
+stallNameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeLabel">
+	<summary>
+dataTypeLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.fieldnameLabel1">
+	<summary>
+fieldnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB">
+	<summary>
+categoryTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown">
+	<summary>
+dataTypeDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB2">
+	<summary>
+categoryTB2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown2">
+	<summary>
+dataTypeDropDown2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB3">
+	<summary>
+categoryTB3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown3">
+	<summary>
+dataTypeDropDown3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB4">
+	<summary>
+categoryTB4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown4">
+	<summary>
+dataTypeDropDown4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB5">
+	<summary>
+categoryTB5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown5">
+	<summary>
+dataTypeDropDown5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB6">
+	<summary>
+categoryTB6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown6">
+	<summary>
+dataTypeDropDown6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB7">
+	<summary>
+categoryTB7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown7">
+	<summary>
+dataTypeDropDown7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.fieldnameLabel4">
+	<summary>
+fieldnameLabel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.categoryTB8">
+	<summary>
+categoryTB8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.dataTypeDropDown8">
+	<summary>
+dataTypeDropDown8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.Submit">
+	<summary>
+Submit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage4.cancelBtn">
+	<summary>
+cancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.welcomeMsg">
+	<summary>
+welcomeMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.addItemBtn">
+	<summary>
+addItemBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.returnButton">
+	<summary>
+returnButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.queryBtn">
+	<summary>
+queryBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.deleteButton">
+	<summary>
+deleteButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.stallContents">
+	<summary>
+stallContents control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DataBasePage.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.coralCnameLabel">
+	<summary>
+coralCnameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.stallNameLabel">
+	<summary>
+stallNameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeLabel">
+	<summary>
+dataTypeLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.fieldnameLabel1">
+	<summary>
+fieldnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB">
+	<summary>
+categoryTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown">
+	<summary>
+dataTypeDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB2">
+	<summary>
+categoryTB2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown2">
+	<summary>
+dataTypeDropDown2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.fieldnameLabel5">
+	<summary>
+fieldnameLabel5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB3">
+	<summary>
+categoryTB3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown3">
+	<summary>
+dataTypeDropDown3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.fieldnameLabel4">
+	<summary>
+fieldnameLabel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB4">
+	<summary>
+categoryTB4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown4">
+	<summary>
+dataTypeDropDown4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB5">
+	<summary>
+categoryTB5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown5">
+	<summary>
+dataTypeDropDown5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB6">
+	<summary>
+categoryTB6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown6">
+	<summary>
+dataTypeDropDown6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB7">
+	<summary>
+categoryTB7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown7">
+	<summary>
+dataTypeDropDown7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB8">
+	<summary>
+categoryTB8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown8">
+	<summary>
+dataTypeDropDown8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB9">
+	<summary>
+categoryTB9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown9">
+	<summary>
+dataTypeDropDown9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB10">
+	<summary>
+categoryTB10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown10">
+	<summary>
+dataTypeDropDown10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.categoryTB11">
+	<summary>
+categoryTB11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.dataTypeDropDown11">
+	<summary>
+dataTypeDropDown11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.Submit">
+	<summary>
+Submit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage3.cancelBtn">
+	<summary>
+cancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.titleLabel">
+	<summary>
+titleLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.instructionsDiv">
+	<summary>
+instructionsDiv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.coralCnameLabel">
+	<summary>
+coralCnameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.stallNameLabel">
+	<summary>
+stallNameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.categoryTB">
+	<summary>
+categoryTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.anotherLabel">
+	<summary>
+anotherLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.YesBTN">
+	<summary>
+YesBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.NoBTN">
+	<summary>
+NoBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.dataTypeLabel">
+	<summary>
+dataTypeLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.dataTypeDropDown">
+	<summary>
+dataTypeDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.SubmitNameBTN">
+	<summary>
+SubmitNameBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.submitCategoryBTN">
+	<summary>
+submitCategoryBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.submitCategory2BTN">
+	<summary>
+submitCategory2BTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBase.cancelBtn">
+	<summary>
+cancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.titleLabel">
+	<summary>
+titleLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.instructionsDiv">
+	<summary>
+instructionsDiv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.coralCnameLabel">
+	<summary>
+coralCnameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.wantMoreFieldsLabel">
+	<summary>
+wantMoreFieldsLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.yesBTN">
+	<summary>
+yesBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.noBTN">
+	<summary>
+noBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.stallNameLabel">
+	<summary>
+stallNameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.stallNameLabel2">
+	<summary>
+stallNameLabel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.dataTypeLabel">
+	<summary>
+dataTypeLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.fieldnameLabel1">
+	<summary>
+fieldnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.categoryTB">
+	<summary>
+categoryTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.dataTypeDropDown">
+	<summary>
+dataTypeDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.fieldnameLabel2">
+	<summary>
+fieldnameLabel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.categoryTB2">
+	<summary>
+categoryTB2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.dataTypeDropDown2">
+	<summary>
+dataTypeDropDown2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.fieldnameLabel3">
+	<summary>
+fieldnameLabel3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.categoryTB3">
+	<summary>
+categoryTB3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.dataTypeDropDown3">
+	<summary>
+dataTypeDropDown3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.fieldnameLabel4">
+	<summary>
+fieldnameLabel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.categoryTB4">
+	<summary>
+categoryTB4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.dataTypeDropDown4">
+	<summary>
+dataTypeDropDown4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.fieldnameLabel5">
+	<summary>
+fieldnameLabel5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.categoryTB5">
+	<summary>
+categoryTB5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.dataTypeDropDown5">
+	<summary>
+dataTypeDropDown5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.Submit">
+	<summary>
+Submit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.Submit2">
+	<summary>
+Submit2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.cancelBtn">
+	<summary>
+cancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.MemberHomePageHL">
+	<summary>
+MemberHomePageHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.UpdateUserInfoHL">
+	<summary>
+UpdateUserInfoHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.UpgradeMembershipHL">
+	<summary>
+UpgradeMembershipHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.TextBox2">
+	<summary>
+TextBox2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.TemplateDatabaseHL">
+	<summary>
+TemplateDatabaseHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.CustomDatabaseHL">
+	<summary>
+CustomDatabaseHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.TextBox3">
+	<summary>
+TextBox3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.HLprintpre">
+	<summary>
+HLprintpre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.PrintLabel">
+	<summary>
+PrintLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.testCustomDatabase.LogOutHL">
+	<summary>
+LogOutHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.userExistsError">
+	<summary>
+userExistsError control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.firstNameTB">
+	<summary>
+firstNameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.firstNameValidator">
+	<summary>
+firstNameValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.lastNameTB">
+	<summary>
+lastNameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.lastNameValidator">
+	<summary>
+lastNameValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.addressOneTB">
+	<summary>
+addressOneTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.address1Validator">
+	<summary>
+address1Validator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.addressTwoTB">
+	<summary>
+addressTwoTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.cityTB">
+	<summary>
+cityTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.cityValidator">
+	<summary>
+cityValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.stateDropDownList1">
+	<summary>
+stateDropDownList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.stateValidator">
+	<summary>
+stateValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.zipTB">
+	<summary>
+zipTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.RequiredFieldValidator7">
+	<summary>
+RequiredFieldValidator7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.validZipCodeFormat">
+	<summary>
+validZipCodeFormat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.phoneTB">
+	<summary>
+phoneTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.phoneNumberReqValidator">
+	<summary>
+phoneNumberReqValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.validPhoneNumberFormat">
+	<summary>
+validPhoneNumberFormat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label10">
+	<summary>
+Label10 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.emailTB">
+	<summary>
+emailTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.emailReqValidator">
+	<summary>
+emailReqValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.validEmailFormat">
+	<summary>
+validEmailFormat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label11">
+	<summary>
+Label11 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.userNameTB">
+	<summary>
+userNameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.userNameValidator">
+	<summary>
+userNameValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label13">
+	<summary>
+Label13 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.userPasswordTB">
+	<summary>
+userPasswordTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.passwordValidator">
+	<summary>
+passwordValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.confirmPasswordLabel">
+	<summary>
+confirmPasswordLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.confirmPasswordTB0">
+	<summary>
+confirmPasswordTB0 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.confirmValidator">
+	<summary>
+confirmValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.comparePasswordValidator">
+	<summary>
+comparePasswordValidator control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.Label12">
+	<summary>
+Label12 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.agreeCB">
+	<summary>
+agreeCB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.RegisterPage.submitBTN">
+	<summary>
+submitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.test.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.TemplatePage.fieldSelectHeader1">
+	<summary>
+fieldSelectHeader1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.TemplatePage.fieldSelectHeader2">
+	<summary>
+fieldSelectHeader2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.TemplatePage.fieldList">
+	<summary>
+fieldList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.TemplatePage.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.TemplatePage.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.TemplatePage.CancelBTN">
+	<summary>
+CancelBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage2.modelLabel">
+	<summary>
+modelLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage2.model">
+	<summary>
+model control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage2.infoLabel">
+	<summary>
+infoLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage2.coralCnameLabel3">
+	<summary>
+coralCnameLabel3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage2.continueBTN">
+	<summary>
+continueBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage2.CancelBTN">
+	<summary>
+CancelBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.titleLabel">
+	<summary>
+titleLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.instructionsDiv">
+	<summary>
+instructionsDiv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.coralCnameLabel">
+	<summary>
+coralCnameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.wantMoreFieldsLabel">
+	<summary>
+wantMoreFieldsLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.yesBTN">
+	<summary>
+yesBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.noBTN">
+	<summary>
+noBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.stallNameLabel">
+	<summary>
+stallNameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.stallNameLabel2">
+	<summary>
+stallNameLabel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.dataTypeLabel">
+	<summary>
+dataTypeLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.fieldnameLabel1">
+	<summary>
+fieldnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.categoryTB">
+	<summary>
+categoryTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.dataTypeDropDown">
+	<summary>
+dataTypeDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.fieldnameLabel2">
+	<summary>
+fieldnameLabel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.categoryTB2">
+	<summary>
+categoryTB2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.dataTypeDropDown2">
+	<summary>
+dataTypeDropDown2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.fieldnameLabel3">
+	<summary>
+fieldnameLabel3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.categoryTB3">
+	<summary>
+categoryTB3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.dataTypeDropDown3">
+	<summary>
+dataTypeDropDown3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.fieldnameLabel4">
+	<summary>
+fieldnameLabel4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.categoryTB4">
+	<summary>
+categoryTB4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.dataTypeDropDown4">
+	<summary>
+dataTypeDropDown4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.fieldnameLabel5">
+	<summary>
+fieldnameLabel5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.categoryTB5">
+	<summary>
+categoryTB5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.dataTypeDropDown5">
+	<summary>
+dataTypeDropDown5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.Submit">
+	<summary>
+Submit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.Submit2">
+	<summary>
+Submit2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomDataBaseModified.cancelBtn">
+	<summary>
+cancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.addedLabel">
+	<summary>
+addedLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.coral">
+	<summary>
+coral control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.addButton">
+	<summary>
+addButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.updateButton">
+	<summary>
+updateButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.editButton">
+	<summary>
+editButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.deleteButton">
+	<summary>
+deleteButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.resetButton">
+	<summary>
+resetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.AddEdit.cancelButton">
+	<summary>
+cancelButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DatabaseTemplates.selectDBHeader">
+	<summary>
+selectDBHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DatabaseTemplates.templateList">
+	<summary>
+templateList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DatabaseTemplates.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DatabaseTemplates.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.DatabaseTemplates.BTN">
+	<summary>
+BTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ForgotPasswordPage.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ForgotPasswordPage.UserNameTB">
+	<summary>
+UserNameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ForgotPasswordPage.UserName">
+	<summary>
+UserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ForgotPasswordPage.EmailTB">
+	<summary>
+EmailTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ForgotPasswordPage.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBase.coralCnameLabel1">
+	<summary>
+coralCnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBase.coralCnameLabel2">
+	<summary>
+coralCnameLabel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBase.coralCnameLabel3">
+	<summary>
+coralCnameLabel3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBase.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBase.Submit">
+	<summary>
+Submit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBase.BTN">
+	<summary>
+BTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.titleLabel">
+	<summary>
+titleLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.instructLabel">
+	<summary>
+instructLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.customCoralGrid">
+	<summary>
+customCoralGrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.yesNoLael">
+	<summary>
+yesNoLael control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.yesButton">
+	<summary>
+yesButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.noButton">
+	<summary>
+noButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomConfirm.cancelButton">
+	<summary>
+cancelButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.MemberHomePageHL">
+	<summary>
+MemberHomePageHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.UpdateUserInfoHL">
+	<summary>
+UpdateUserInfoHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.UpgradeMembershipHL">
+	<summary>
+UpgradeMembershipHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.TextBox2">
+	<summary>
+TextBox2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.TemplateDatabaseHL">
+	<summary>
+TemplateDatabaseHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.CustomDatabaseHL">
+	<summary>
+CustomDatabaseHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.TextBox3">
+	<summary>
+TextBox3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.HLprintpre">
+	<summary>
+HLprintpre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.HLprint">
+	<summary>
+HLprint control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.prtLabel">
+	<summary>
+prtLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPage1.LogOutHL">
+	<summary>
+LogOutHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.InfoRanchGlobalContent">
+	<summary>
+InfoRanchGlobalContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.ContactUsHL">
+	<summary>
+ContactUsHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.AboutUsHL">
+	<summary>
+AboutUsHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanchGlobal.TermsHL">
+	<summary>
+TermsHL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPageHome.welcomeMsg">
+	<summary>
+welcomeMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPageHome.selectDBHead">
+	<summary>
+selectDBHead control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPageHome.userDatabasesDD">
+	<summary>
+userDatabasesDD control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPageHome.noDBMsg">
+	<summary>
+noDBMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.MemberPageHome.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage0.coralCnameLabel1">
+	<summary>
+coralCnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage0.coralCnameLabel2">
+	<summary>
+coralCnameLabel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage0.coralCnameLabel3">
+	<summary>
+coralCnameLabel3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage0.userDatabasesDD">
+	<summary>
+userDatabasesDD control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage0.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage0.BTN">
+	<summary>
+BTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.user_nameTB">
+	<summary>
+user_nameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.user_passwordTB">
+	<summary>
+user_passwordTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.InfoRanch.LoginError">
+	<summary>
+LoginError control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.coralCnameLabel">
+	<summary>
+coralCnameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.NameTB">
+	<summary>
+NameTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.stallNameLabel">
+	<summary>
+stallNameLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeLabel">
+	<summary>
+dataTypeLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.fieldnameLabel1">
+	<summary>
+fieldnameLabel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB">
+	<summary>
+categoryTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown">
+	<summary>
+dataTypeDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB2">
+	<summary>
+categoryTB2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown2">
+	<summary>
+dataTypeDropDown2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB3">
+	<summary>
+categoryTB3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown3">
+	<summary>
+dataTypeDropDown3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB4">
+	<summary>
+categoryTB4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown4">
+	<summary>
+dataTypeDropDown4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB5">
+	<summary>
+categoryTB5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown5">
+	<summary>
+dataTypeDropDown5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB6">
+	<summary>
+categoryTB6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown6">
+	<summary>
+dataTypeDropDown6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.categoryTB7">
+	<summary>
+categoryTB7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.dataTypeDropDown7">
+	<summary>
+dataTypeDropDown7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.Submit">
+	<summary>
+Submit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.CustomComplexDataBasePage5.cancelBtn">
+	<summary>
+cancelBtn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.welcomeLbl">
+	<summary>
+welcomeLbl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.searchByLbl">
+	<summary>
+searchByLbl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.fieldDropDown">
+	<summary>
+fieldDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.thatLabel">
+	<summary>
+thatLabel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.limitDropDown">
+	<summary>
+limitDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.searchTB">
+	<summary>
+searchTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.searchResults">
+	<summary>
+searchResults control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.SubmitBTN">
+	<summary>
+SubmitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.Cancel1">
+	<summary>
+Cancel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.NewSearchBTN">
+	<summary>
+NewSearchBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.Query.Cancel2BTN">
+	<summary>
+Cancel2BTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.memberRB">
+	<summary>
+memberRB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.nonmemberRB">
+	<summary>
+nonmemberRB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.emailTB">
+	<summary>
+emailTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.commentsTB">
+	<summary>
+commentsTB control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.sumbitBTN">
+	<summary>
+sumbitBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.clearBTN">
+	<summary>
+clearBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:InfoRanch.ContactUsPage.returnBTN">
+	<summary>
+returnBTN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:InfoRanch.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:InfoRanch.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:InfoRanch.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

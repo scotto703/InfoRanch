@@ -12,24 +12,37 @@ Public Class DataBasePage
     Dim name As String
     Dim category As String
     Dim myConn As New DBConnection
+    Dim coralTemplate As New DBTemplate
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim userID As String = Session("user_id")
         Dim userTable As String = Session("user_table")
         Dim myCon As New DBConnection
-
+        Dim complexDatabaseRegex As New Regex("_complex$")
+        welcomeMsg.Text = "'" & Session("user_table") & "'" & " table"
         DBConn = myCon.connect(userID)
         DBConn.Open()
 
-        DBCom = New NpgsqlCommand("SELECT " & userTable & " FROM FieldList" & userTable & " ORDER BY sortorder", DBConn)
+        If complexDatabaseRegex.IsMatch(userTable) Then
+            Response.Redirect("~/MemberPages/CustomComplexDataBasePage.aspx")
+        Else
+            DBCom = New NpgsqlCommand("SELECT " & userTable & " FROM FieldList" & userTable & " ORDER BY sortorder", DBConn)
+
+        End If
+
+        If Session("database_status") IsNot Nothing Then
+            If complexDatabaseRegex.IsMatch(Session("database_status")) Then
+                deleteButton.Enabled = False
+            End If
+        End If
+
         Dim dbReader As NpgsqlDataReader = DBCom.ExecuteReader()
 
         dbReader.Read()
 
         Dim titleField As String = dbReader(0)
         titleField = Replace(titleField, " ", "_")
-
         dbReader.Close()
 
         DBCom = New NpgsqlCommand("SELECT ID, " & titleField & " FROM " & userTable, DBConn)
@@ -62,7 +75,93 @@ Public Class DataBasePage
 
 
     Protected Sub addItemBtn_Click(ByVal sender As Object, ByVal e As EventArgs) Handles addItemBtn.Click
+        Dim pk As String = ""
+        Dim fk1 As String = ""
+        Dim fk2 As String = ""
+        Dim mode As String = "add"
+
+        coralTemplate.setName(Session("user_table"))
+
+        ' Check to see if the ID parameter is set in the query string
+        ' If it exists then the mode is either edit or view
+
+        If Request.QueryString.Get("ID") IsNot Nothing Then
+
+            'If there is a Mode parameter in the query string then set the mode
+            ' to edit otherwise set the mode to view
+
+            If Request.QueryString.Get("Mode") IsNot Nothing Then
+                mode = "edit"
+            Else
+                mode = "view"
+            End If
+
+        End If
+
+        'Create connection to get list of fields into fieldList string
+        DBConn = myConn.connect(Session("user_id"))
+
+        DBCom = New NpgsqlCommand("SELECT " & coralTemplate.getName() & ", datatype, sortorder FROM fieldlist" & coralTemplate.getName() & " WHERE " & _
+          coralTemplate.getName() & "<> 'ID' ORDER BY sortorder", DBConn)
+
+        DBConn.Open()
+
+        Dim dbReader As NpgsqlDataReader = DBCom.ExecuteReader()
+
+        'Read the query
+        While dbReader.Read()
+            coralTemplate.addItem(dbReader(0), dbReader(1), dbReader(2))
+        End While
+
+        If Session("table_number_used") = "table1" Then
+            If Session("user_table1_model") = "stock_item" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(3)
+            End If
+            If Session("user_table1_model") = "employee_record" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(2) & ", "
+                fk2 = coralTemplate.getField(3)
+            End If
+            If Session("user_table1_model") = "acquaintance_address" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(3)
+            End If
+        End If
+        If Session("table_number_used") = "table2" Then
+            If Session("user_table2_model") = "supplier" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(7)
+            End If
+            If Session("user_table2_model") = "department" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+            If Session("user_table2_model") = "acquaintance_name" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+        End If
+        If Session("table_number_used") = "table3" Then
+            If Session("user_table3_model") = "manufacturer" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+            If Session("user_table3_model") = "corporate" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+            If Session("user_table3_model") = "acquaintance_phone" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(1)
+            End If
+        End If
+
+        'Close connectin
+        dbReader.Close()
+        DBConn.Close()
+
+        MsgBox("Warnings - When entering 'Primary Key' (PK) value and 'Foreign Key' (FK) value(s) of a record or an item into a table, make sure the entered value of the PK " & _
+               "is not as same as the PK value of the previous record or previous item, and also take notes of the FK value(s), to enter them again in a different table later. " & _
+               "In this case those PK, FK value(s) is/are: " & pk & fk1 & fk2, MsgBoxStyle.Information)
         Server.Transfer("~/MemberPages/AddEdit.aspx", True)
+
     End Sub
 
     Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles stallContents.SelectedIndexChanged

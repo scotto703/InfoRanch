@@ -173,11 +173,11 @@ Namespace DB
 						Select Case (fieldTemplate.getDataType(i))
 							Case "varchar(50)"
 								CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ErrorMessage = "All fields required"
-								CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ControlToValidate = fieldTemplate.getField(i) & "Text"
-							Case "text"
-								CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ErrorMessage = "All fields required"
-								CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ControlToValidate = fieldTemplate.getField(i) & "Text"
-								CType(ph.FindControl(fieldTemplate.getField(i) & "Text"), TextBox).TextMode = TextBoxMode.MultiLine
+                                CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ControlToValidate = fieldTemplate.getField(i) & "Text"
+                            Case "text"
+                                CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ErrorMessage = "All fields required"
+                                CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ControlToValidate = fieldTemplate.getField(i) & "Text"
+                                CType(ph.FindControl(fieldTemplate.getField(i) & "Text"), TextBox).TextMode = TextBoxMode.MultiLine
 							Case "date"
 								CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ErrorMessage = "All fields required"
 								CType(ph.FindControl(fieldTemplate.getField(i) & "Req"), RequiredFieldValidator).ControlToValidate = fieldTemplate.getField(i) & "Text"

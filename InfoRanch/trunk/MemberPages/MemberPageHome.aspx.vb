@@ -16,7 +16,7 @@ Partial Public Class MemberPageHome
         selectDBHead.Text = "Please Select A Database"
         noDBMsg.Text = "You Currently Have No Databases. Please Select Template Database Or Custom Database On The Left To Create A Database"
         noDBMsg.Visible = False
-
+        Session("database_status") = ""
 
         Dim userDatabase = Session("user_id").ToString()
 		Dim DbConn As New NpgsqlConnection
@@ -29,7 +29,7 @@ Partial Public Class MemberPageHome
 
         If Not Page.IsPostBack Then
 
-			DbConn.Open()
+            DbConn.Open()
 
             ' loads the items into the drop-down list
             userDatabasesDD.DataSource = cmd.ExecuteReader()
@@ -65,6 +65,24 @@ Partial Public Class MemberPageHome
 
         ' assigns the selected item value to the Session variable and 
         ' redirects to UserDatabasePage.aspx
+        If userDatabasesDD.SelectedValue.ToString = "inventory_complex" Then
+            Session("user_table1_model") = "stock_item"
+            Session("user_table2_model") = "supplier"
+            Session("user_table3_model") = "manufacturer"
+        End If
+
+        If userDatabasesDD.SelectedValue.ToString = "corporate_employee_complex" Then
+            Session("user_table1_model") = "employee_record"
+            Session("user_table2_model") = "department"
+            Session("user_table3_model") = "corporate"
+        End If
+
+        If userDatabasesDD.SelectedValue.ToString = "acquaintance_information_complex" Then
+            Session("user_table1_model") = "acquaintance_address"
+            Session("user_table2_model") = "acquaintance_name"
+            Session("user_table3_model") = "acquaintance_phone"
+        End If
+
         Session("user_table") = userDatabasesDD.SelectedValue.ToString
 
         Server.Transfer("~/MemberPages/DataBasePage.aspx", True)

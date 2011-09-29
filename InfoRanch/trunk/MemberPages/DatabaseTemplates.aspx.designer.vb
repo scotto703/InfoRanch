@@ -48,4 +48,13 @@ Partial Public Class DatabaseTemplates
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents SubmitBTN As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''BTN control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BTN As Global.System.Web.UI.WebControls.Button
 End Class

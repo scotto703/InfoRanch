@@ -12,42 +12,37 @@
     <style type="text/css">
         .style1
         {
-            width: 40%;
+            width: 100%;
+            height: 106px;
         }
         .style3
         {
-            width: 135px;
+            width: 152px;
             height: 38px;
         }
-        .style4
-        {
-            height: 38px;
-        }
-                
+                        
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
   
-<div id="header">
+<div id="header" align="center">
 
-    <table class="style1">
+    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" 
+        Text="INFORANCH" ForeColor="#000099"></asp:Label>
+    <br />
+    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Italic="True" 
+        Text="The premier database building site on the web" ForeColor="#000099"></asp:Label>
+    <br />
+
+    <table class="style1" 
+        style="background-image: url('/Bull_Ride.jpg'); background-repeat: repeat-x; background-position: center center">
     
         <tr>
-            <td class="style3" rowspan="2">
-                <asp:Image ID="Image1" runat="server" Height="66px" ImageUrl="~/Bull_Ride.jpg" 
-                    Width="131px" />
-            </td>
-            <td class="style4">
-                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Arial" 
-                    Text="InfoRanch" ForeColor="Maroon"></asp:Label>
-            </td>
+            <td class="style3" align="center">
+                &nbsp;</td>
         </tr>
-        <tr>
-            <td class="style4">
-                </td>
-        </tr>        
-    </table>
+        </table>
 </div>
 
 <div id="InfoRanchGlobal">
@@ -62,15 +57,15 @@
 <div id="footer">
 
 &nbsp; &nbsp;
-<asp:HyperLink ID="HomeHL" runat="server" 
-        NavigateUrl="~/MemberPages/MemberPageHome.aspx">[Home]</asp:HyperLink>
-&nbsp; &nbsp;
 <asp:HyperLink ID="ContactUsHL" runat="server" 
         NavigateUrl="~/FooterPages/ContactUsPage.aspx">[Contact Us]</asp:HyperLink>
 &nbsp; &nbsp; 
 <asp:HyperLink ID="AboutUsHL" runat="server" 
         NavigateUrl="~/FooterPages/AboutUsPage.aspx">[About Us]</asp:HyperLink>
-&nbsp; &nbsp; 
+&nbsp;&nbsp;<br />
+&nbsp;<asp:HyperLink ID="HyperLink1" runat="server" 
+        NavigateUrl="~/FooterPages/SiteInformation.aspx">[Site Information]</asp:HyperLink>
+&nbsp;&nbsp; 
 <asp:HyperLink ID="TermsHL" runat="server" 
         NavigateUrl="~/FooterPages/Inforanch_Terms_and_Conditions.pdf">[Terms and Conditions]</asp:HyperLink>
 

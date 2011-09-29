@@ -15,7 +15,6 @@ Partial Public Class InfoRanch
     Dim encrypted As New Encryption
     Dim connect As New DBConnection
 
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -29,8 +28,8 @@ Partial Public Class InfoRanch
 
         ' query the member authentication table
         Dim sql As NpgsqlCommand = New NpgsqlCommand("SELECT * FROM member_authentication WHERE user_name ='" _
-            & userNameTB.Text & "' and user_password = @password", DBConn)
-        sql.Parameters.AddWithValue("@password", Convert.ToBase64String(encrypted.encrypt(userPasswordTB.Text)))
+            & user_nameTB.Text & "' and user_password = @password", DBConn)
+        sql.Parameters.AddWithValue("@password", Convert.ToBase64String(encrypted.encrypt(user_passwordTB.Text)))
 
 
         dr = sql.ExecuteReader
@@ -39,18 +38,19 @@ Partial Public Class InfoRanch
         ' the user id value and re-directs to MemberPageHome.aspx
 
         If dr.HasRows Then
-            Session("user_id") = userNameTB.Text
+            Session("user_id") = user_nameTB.Text
             Server.Transfer("~/MemberPages/MemberPageHome.aspx", True)
         Else
             LoginError.Visible = True
-            userNameTB.Text = String.Empty
-            userPasswordTB.Text = String.Empty
-            userNameTB.Focus()
+            user_nameTB.Text = String.Empty
+            user_passwordTB.Text = String.Empty
+            user_nameTB.Focus()
         End If
 
         dr.Close()
         DBConn.Close()
 
+        '==============================================================================
 
 
     End Sub

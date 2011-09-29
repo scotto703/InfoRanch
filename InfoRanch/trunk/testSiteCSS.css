@@ -1,0 +1,49 @@
+﻿#header {border-bottom:3px solid maroon}
+#footer { border-top: 3px solid maroon;
+		 text-align: center;
+		 font-family: Arial;
+		 color: Maroon; 
+		 padding-top: 10px;
+	height: 41px;
+}
+
+#links 
+ {
+    width: 154px;    
+    padding: 10px;
+    font-size: 90%;
+    text-align: left;
+    position: absolute;
+    top: 157px;
+    margin-top: 10px;
+    left: 12px;
+    border-bottom: solid 3px maroon; border-right: solid 3px maroon;
+	height: 287px;
+	right: 838px;
+	margin-right: 0px;
+}
+
+#LinkText {margin-right: 5px;
+             font-family: Arial; 
+             color: maroon;
+             font-size: small;
+             text-decoration: underline; 
+			 line-height: 25px;
+	height: 292px;
+	width: 148px;
+    margin-top: 0px;
+}
+
+#LinkText a:visited{color: Blue}
+
+#mainContent {
+    text-align: left;
+    margin-left: 175px;
+    padding: 5px;
+}
+#InfoRanchGlobal
+{
+text-align: left;
+    margin-left: 0px;
+    padding: 5px;
+}	

@@ -8,8 +8,8 @@ Imports Npgsql
 Namespace DB
 
 	Public Class DBConnection
-		Private Const DB_USER As String = "inforanch"
-		Private Const DB_PWD As String = "inforanch"
+        Private Const DB_USER As String = "inforanch"
+        Private Const DB_PWD As String = "inforanch"
 		Private Const DB_SERVER As String = "localhost"
 		Private Const DB_PORT As String = "5432"
 

@@ -42,7 +42,8 @@ Public Class AddEdit
         dbConn = myCon.connect(Session("user_id"))
 
         dbCom = New NpgsqlCommand("SELECT " & coralTemplate.getName() & ", datatype, sortorder FROM fieldlist" & coralTemplate.getName() & " WHERE " & _
-          coralTemplate.getName() & "<> 'ID' ORDER BY sortorder", dbConn)
+                                   coralTemplate.getName() & "<> 'ID' ORDER BY sortorder", dbConn)
+
         dbConn.Open()
 
         Dim dbReader As NpgsqlDataReader = dbCom.ExecuteReader()
@@ -54,7 +55,6 @@ Public Class AddEdit
 
         'Close connectin
         dbReader.Close()
-        dbConn.Close()
 
         Dim returnedRecord As NpgsqlDataAdapter
         Dim recordSet As DataSet
@@ -75,11 +75,16 @@ Public Class AddEdit
                 returnedRecord = New NpgsqlDataAdapter("SELECT " & table & " FROM fieldlist" & table & " LIMIT 1", dbConn)
                 recordSet = New DataSet()
                 table = "fieldlist" & table
+
             Case Else
                 Dim recordID As Integer = Convert.ToInt32(Request.QueryString.Get("ID"))
                 returnedRecord = New NpgsqlDataAdapter("SELECT " & fieldList & " FROM " & table & " WHERE id = " & recordID, dbConn)
                 recordSet = New DataSet()
         End Select
+
+        dbConn.Close()
+
+        '=======================================================================================================
 
         ' Call the template to create the UI by binding data to it
 
@@ -88,6 +93,7 @@ Public Class AddEdit
         coral.FooterTemplate = New DataTemplate(ListItemType.Footer, coralTemplate, mode)
 
         returnedRecord.Fill(recordSet, table)
+
         coral.DataSource = recordSet.Tables(table)
 
         coral.DataBind()
@@ -162,6 +168,9 @@ Public Class AddEdit
         Dim fieldString As String = ""
         Dim paramString As String = ""
         Dim paramList As New List(Of String)
+        Dim pk As String = ""
+        Dim fk1 As String = ""
+        Dim fk2 As String = ""
 
         'Set up the strings necessary to create the query
 
@@ -174,6 +183,46 @@ Public Class AddEdit
         fieldString &= coralTemplate.getField(coralTemplate.length - 1)
         paramList.Add("@" & coralTemplate.getField(coralTemplate.length - 1))
         paramString &= "@" & coralTemplate.getField(coralTemplate.length - 1)
+
+        If Session("table_number_used") = "table1" Then
+            If Session("user_table1_model") = "stock_item" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(3)
+            End If
+            If Session("user_table1_model") = "employee_record" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(2) & ", "
+                fk2 = coralTemplate.getField(3)
+            End If
+            If Session("user_table1_model") = "acquaintance_address" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(3)
+            End If
+        End If
+        If Session("table_number_used") = "table2" Then
+            If Session("user_table2_model") = "supplier" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(7)
+            End If
+            If Session("user_table2_model") = "department" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+            If Session("user_table2_model") = "acquaintance_name" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+        End If
+        If Session("table_number_used") = "table3" Then
+            If Session("user_table3_model") = "manufacturer" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+            If Session("user_table3_model") = "corporate" Then
+                pk = coralTemplate.getField(0) & ", "
+            End If
+            If Session("user_table3_model") = "acquaintance_phone" Then
+                pk = coralTemplate.getField(0) & ", "
+                fk1 = coralTemplate.getField(1)
+            End If
+        End If
 
         ' Create connection and run query
 
@@ -191,7 +240,14 @@ Public Class AddEdit
         Next
 
         dbConn.Open()
-        dbCom.ExecuteNonQuery()
+
+        Try
+            dbCom.ExecuteNonQuery()
+        Catch ex As Npgsql.NpgsqlException
+            MsgBox("The entered value for PK is duplicated with previous record or item, please redo..! The PK, FK data field(s) is/are: " & pk & fk1 & fk2 & ". Please pay attention to these data fields when entering them..!", MsgBoxStyle.Information)
+            Response.Redirect("~/MemberPages/AddEdit.aspx")
+        End Try
+
         dbConn.Close()
 
         addedLabel.Visible = True

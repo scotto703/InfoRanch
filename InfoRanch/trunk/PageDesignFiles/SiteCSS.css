@@ -1,29 +1,39 @@
 ﻿#header {border-bottom:3px solid maroon}
-#footer { border-top: 3px solid maroon;
+#footer {border-top:3px solid maroon;
 		 text-align: center;
 		 font-family: Arial;
 		 color: Maroon; 
-		 padding-top: 10px}
+		 padding-top: 10px;
+	height: 41px;
+}
 
 #links 
  {
-    width: 150px;    
+    width: 214px;    
     padding: 10px;
     font-size: 90%;
     text-align: left;
     position: absolute;
-    top: 125px;
+    top: 157px;
     margin-top: 10px;
-    left: 0px;
-    border-bottom: solid 3px maroon; border-right: solid 3px maroon
+    left: 12px;
+    border-bottom: solid 3px maroon; border-right: solid 3px maroon;
+	height: 287px;
+	right: 774px;
+	margin-right: 0px;
 }
 
-#LinkText {margin-right: 10px;
+#LinkText {margin-right: 5px;
              font-family: Arial; 
              color: maroon;
              font-size: small;
              text-decoration: underline; 
-			 line-height: 25px}
+			 line-height: 25px;
+	height: 292px;
+	width: 200px;
+    margin-top: 0px;
+}
+
 
 #LinkText a:visited{color: Blue}
 

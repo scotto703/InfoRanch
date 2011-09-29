@@ -26,6 +26,34 @@ Partial Public Class DatabaseTemplates
 
     Protected Sub SubmitBTN_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SubmitBTN.Click
 
+        '==================================================================
+
+        Dim userDatabase = Session("user_id").ToString()
+        Dim Conn As New NpgsqlConnection
+        Dim myCon As New DBConnection
+
+        Conn = myCon.connect(userDatabase)
+
+        Conn.Open()
+
+        ' connection string with the Session variable "user_id"
+        Dim cmd As NpgsqlCommand = New NpgsqlCommand("SELECT List from TableList", Conn)
+
+        Dim curDBReader As NpgsqlDataReader
+
+        curDBReader = cmd.ExecuteReader()
+
+        While curDBReader.Read()
+            If templateList.SelectedValue = curDBReader(0) Then
+                MsgBox("'" & templateList.SelectedValue & "'" & " is already created, please choose a different template", MsgBoxStyle.Information)
+                curDBReader.Close()
+                Response.Redirect("~/MemberPages/DatabaseTemplates.aspx")
+            End If
+        End While
+
+        Conn.Close()
+        '==================================================================
+
         ' assigns the value to the session variable
 
         Session("template_selection") = templateList.SelectedValue
@@ -35,6 +63,10 @@ Partial Public Class DatabaseTemplates
 
 
 
+    End Sub
+
+    Protected Sub BTN_Click(sender As Object, e As EventArgs) Handles BTN.Click
+        Response.Redirect("~/MemberPages/MemberPageHome.aspx")
     End Sub
 End Class
 

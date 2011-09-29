@@ -13,66 +13,66 @@ Option Explicit On
 
 Partial Public Class CustomConfirm
 
-	'''<summary>
-	'''titleLabel control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents titleLabel As Global.System.Web.UI.WebControls.Label
+    '''<summary>
+    '''titleLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents titleLabel As Global.System.Web.UI.WebControls.Label
 
-	'''<summary>
-	'''instructLabel control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents instructLabel As Global.System.Web.UI.WebControls.Label
+    '''<summary>
+    '''instructLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents instructLabel As Global.System.Web.UI.WebControls.Label
 
-	'''<summary>
-	'''GridView1 control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents customCoralGrid As Global.System.Web.UI.WebControls.GridView
+    '''<summary>
+    '''customCoralGrid control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents customCoralGrid As Global.System.Web.UI.WebControls.GridView
 
-	'''<summary>
-	'''yesNoLael control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents yesNoLael As Global.System.Web.UI.WebControls.Label
+    '''<summary>
+    '''yesNoLael control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents yesNoLael As Global.System.Web.UI.WebControls.Label
 
-	'''<summary>
-	'''yesButton control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents yesButton As Global.System.Web.UI.WebControls.Button
+    '''<summary>
+    '''yesButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents yesButton As Global.System.Web.UI.WebControls.Button
 
-	'''<summary>
-	'''noButton control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents noButton As Global.System.Web.UI.WebControls.Button
+    '''<summary>
+    '''noButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents noButton As Global.System.Web.UI.WebControls.Button
 
-	'''<summary>
-	'''cancelButton control.
-	'''</summary>
-	'''<remarks>
-	'''Auto-generated field.
-	'''To modify move field declaration from designer file to code-behind file.
-	'''</remarks>
-	Protected WithEvents cancelButton As Global.System.Web.UI.WebControls.Button
+    '''<summary>
+    '''cancelButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cancelButton As Global.System.Web.UI.WebControls.Button
 End Class

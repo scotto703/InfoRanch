@@ -65,6 +65,7 @@
             &nbsp;</td>
         <td style="width: 703px">
             <asp:Button ID="SubmitBTN" runat="server" Text="Submit" />
+                <asp:Button ID="BTN" runat="server" Text="Cancel" Width="68px" />
             </td>
         <td style="width: 194px">
             &nbsp;</td>

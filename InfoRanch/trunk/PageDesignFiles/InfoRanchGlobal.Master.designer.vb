@@ -32,15 +32,6 @@ Partial Public Class InfoRanchGlobal
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Image1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
-
-    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
@@ -50,6 +41,15 @@ Partial Public Class InfoRanchGlobal
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Label2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''InfoRanchGlobalContent control.
     '''</summary>
     '''<remarks>
@@ -57,15 +57,6 @@ Partial Public Class InfoRanchGlobal
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents InfoRanchGlobalContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
-
-    '''<summary>
-    '''HomeHL control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents HomeHL As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
     '''ContactUsHL control.
@@ -84,6 +75,15 @@ Partial Public Class InfoRanchGlobal
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents AboutUsHL As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''HyperLink1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
     '''TermsHL control.

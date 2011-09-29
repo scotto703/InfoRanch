@@ -21,6 +21,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,14 +42,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+    <Reference Include="Npgsql, Version=2.0.11.91, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Npgsql\ms.net4.0\Mono.Security.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Npgsql, Version=2.0.10.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Npgsql\ms.net4.0\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Npgsql\ms.net\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -75,6 +71,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Import Include="InfoRanch" />
+    <Import Include="InfoRanch.DB" />
+    <Import Include="InfoRanch.My" />
+    <Import Include="InfoRanch.My.Resources" />
+    <Import Include="InfoRanch.Util" />
+    <Import Include="Microsoft" />
+    <Import Include="Microsoft.CSharp" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -99,11 +102,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bull_Ride.jpg" />
+    <Content Include="MemberPages\acquaintance_information.jpg" />
     <Content Include="MemberPages\AddEdit.aspx" />
+    <Content Include="MemberPages\corporate_employee.jpg" />
+    <Content Include="MemberPages\CustomComplexConfirm.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage0.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage1.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage2.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage3.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage4.aspx" />
+    <Content Include="MemberPages\CustomComplexDataBasePage5.aspx" />
     <Content Include="MemberPages\CustomConfirm.aspx" />
+    <Content Include="MemberPages\CustomDataBase.aspx" />
     <Content Include="MemberPages\DataBasePage.aspx" />
+    <Content Include="MemberPages\inventory.jpg" />
     <Content Include="test.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="testCustomDatabase.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataTemplate.vb" />
@@ -152,11 +170,74 @@
       <DependentUpon>AddEdit.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="MemberPages\CustomComplexConfirm.aspx.designer.vb">
+      <DependentUpon>CustomComplexConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexConfirm.aspx.vb">
+      <DependentUpon>CustomComplexConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage0.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage0.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage0.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage1.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage1.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage2.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage2.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage3.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage3.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage4.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage4.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage4.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage5.aspx.designer.vb">
+      <DependentUpon>CustomComplexDataBasePage5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomComplexDataBasePage5.aspx.vb">
+      <DependentUpon>CustomComplexDataBasePage5.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="MemberPages\CustomConfirm.aspx.designer.vb">
       <DependentUpon>CustomConfirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberPages\CustomConfirm.aspx.vb">
       <DependentUpon>CustomConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\CustomDataBaseOld.aspx.designer.vb">
+      <DependentUpon>CustomDataBaseOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\CustomDataBaseOld.aspx.vb">
+      <DependentUpon>CustomDataBaseOld.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="MemberPages\CustomDataBase.aspx.designer.vb">
@@ -244,6 +325,13 @@
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="testCustomDatabase.aspx.designer.vb">
+      <DependentUpon>testCustomDatabase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testCustomDatabase.aspx.vb">
+      <DependentUpon>testCustomDatabase.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -259,7 +347,7 @@
     <Content Include="FooterPages\ForgotPasswordPage.aspx" />
     <Content Include="FooterPages\RegisterPage.aspx" />
     <Content Include="InfoRanch.aspx" />
-    <Content Include="MemberPages\CustomDataBase.aspx" />
+    <Content Include="MemberPages\CustomDataBaseOld.aspx" />
     <Content Include="MemberPages\DatabaseTemplates.aspx" />
     <Content Include="MemberPages\MemberPageHome.aspx" />
     <Content Include="MemberPages\Query.aspx" />
@@ -297,7 +385,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64786</DevelopmentServerPort>
+          <DevelopmentServerPort>54047</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/InfoRanch</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
